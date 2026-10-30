@@ -1,0 +1,31 @@
+---
+import { url } from '../lib/site';
+export interface Crumb { label: string; href?: string }
+interface Props { items: Crumb[] }
+const { items } = Astro.props;
+---
+<nav class="crumbs" aria-label="Breadcrumb">
+  <ol class="wrap-wide">
+    <li>
+      <a href={url('')} aria-label="Programme home">
+        <svg width="15" height="15" viewBox="0 0 16 16" aria-hidden="true"><path d="M8 1.5 1 7.2l1 1.2 1-.8V14h4v-4h2v4h4V7.6l1 .8 1-1.2z" fill="currentColor"/></svg>
+        <span>Programme</span>
+      </a>
+    </li>
+    {items.map((c, i) => (
+      <li>
+        {c.href && i < items.length - 1 ? <a href={c.href}>{c.label}</a> : <span aria-current="page">{c.label}</span>}
+      </li>
+    ))}
+  </ol>
+</nav>
+
+<style>
+  .crumbs { background: var(--crumb); font-size: .8rem; }
+  ol { list-style: none; display: flex; flex-wrap: wrap; align-items: center; gap: .25rem .5rem; padding: .7rem 0; margin-block: 0; }
+  li { display: inline-flex; align-items: center; gap: .5rem; }
+  li + li::before { content: '›'; color: var(--ink-3); font-size: 1rem; line-height: 1; }
+  a { color: var(--ink-2); text-decoration: none; display: inline-flex; align-items: center; gap: .35rem; }
+  a:hover { color: var(--iom-blue); text-decoration: underline; }
+  [aria-current] { color: var(--iom-blue); font-weight: 700; }
+</style>

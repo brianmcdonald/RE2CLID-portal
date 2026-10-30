@@ -1,0 +1,33 @@
+---
+import Callout from './Callout.astro';
+/** Blue hero band at the top of every page, with the proof-of-concept callout. */
+interface Props { eyebrow?: string; title: string; lede?: string; tags?: string[] }
+const { eyebrow, title, lede, tags = [] } = Astro.props;
+---
+<section class="hero band band--blue">
+  <div class="hero__dots" aria-hidden="true"></div>
+  <div class="wrap hero__inner">
+    {eyebrow && <span class="eyebrow">{eyebrow}</span>}
+    <h1>{title}</h1>
+    {lede ? <p class="lede">{lede}</p> : Astro.slots.has('lede') && <p class="lede"><slot name="lede" /></p>}
+    {tags.length > 0 && <p class="hero__tags">{tags.map((t) => <span class="tag">{t}</span>)}</p>}
+    <slot />
+    <Callout type="poc" />
+  </div>
+</section>
+
+<style>
+  .hero { position: relative; overflow: hidden; padding-top: clamp(2.5rem, 6vw, 4rem); padding-bottom: clamp(2rem, 5vw, 3rem); }
+  .hero__inner { position: relative; }
+  .hero__dots {
+    position: absolute; inset: 0; opacity: .14; pointer-events: none;
+    background-image: radial-gradient(circle, #fff 1.2px, transparent 1.4px);
+    background-size: 14px 14px;
+    mask-image: radial-gradient(ellipse 60% 80% at 85% 40%, #000 0%, transparent 70%);
+    -webkit-mask-image: radial-gradient(ellipse 60% 80% at 85% 40%, #000 0%, transparent 70%);
+  }
+  .hero h1 { margin-bottom: .5rem; max-width: 22ch; }
+  .hero .lede { max-width: 62ch; }
+  .hero__tags { display: flex; flex-wrap: wrap; gap: .4rem; margin: 1rem 0 0; }
+  .hero__tags .tag { background: rgb(255 255 255 / 14%); color: #fff; }
+</style>

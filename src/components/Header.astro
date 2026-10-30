@@ -1,0 +1,71 @@
+---
+import SubNav from './SubNav.svelte';
+import { url, CLUSTERS, countriesIn, countryUrl, clusterUrl, EHSA_PAGE } from '../lib/site';
+
+interface Props { active?: string }
+const { active = 'programme' } = Astro.props;
+
+const menu = CLUSTERS.map((c) => ({
+  key: c.slug,
+  label: `Cluster ${c.number}`,
+  title: c.name,
+  href: clusterUrl(c),
+  children: countriesIn(c.slug).map((k) => ({ label: k.short, href: countryUrl(k) })),
+}));
+---
+<header class="site-header">
+  <div class="utility">
+    <div class="wrap-wide utility__inner">
+      <span class="poc-flag"><span aria-hidden="true">●</span> Proof of concept · sample materials</span>
+      <nav aria-label="IOM websites" class="utility__links">
+        <a href={EHSA_PAGE}>IOM East, Horn &amp; Southern Africa</a>
+        <a href="https://www.iom.int/">IOM Global Website</a>
+      </nav>
+    </div>
+  </div>
+
+  <div class="topbar">
+    <div class="wrap-wide topbar__inner">
+      <a class="brand" href={url('')} aria-label="RE2CLID home">
+        <img src={url('img/iom-logo-white.svg')} alt="IOM UN Migration" width="138" height="47" />
+        <span class="brand__name">
+          <span class="brand__acronym">RE2CLID</span>
+          <span class="brand__full">Regional Responses to Climate Displacement<br class="hide-sm" /> in Sub-Saharan Africa</span>
+        </span>
+      </a>
+      <a class="btn btn--yellow topbar__cta" href="#analyses">Action button</a>
+    </div>
+  </div>
+
+  <SubNav client:idle items={menu} {active} home={url('')} />
+</header>
+
+<style>
+  .site-header { position: sticky; top: 0; z-index: 50; }
+  /* Non-sticky header for screenshots (add ?screenshot to the URL) and printing */
+  :global(html.screenshot) .site-header { position: static; }
+  @media print { .site-header { position: static; } }
+  .utility { background: #fff; font-size: .8rem; border-bottom: 1px solid var(--line); }
+  .utility__inner { display: flex; justify-content: space-between; align-items: center; gap: 1rem; min-height: 32px; }
+  .utility__links { display: flex; gap: 1.25rem; }
+  .utility a { font-weight: 700; text-decoration: none; }
+  .poc-flag { color: #8a5a00; font-weight: 600; }
+  .poc-flag span { color: var(--iom-yellow); }
+  .topbar { background: var(--iom-blue); }
+  .topbar__inner { display: flex; align-items: center; justify-content: space-between; gap: 1rem; min-height: 68px; }
+  .brand { display: flex; align-items: center; gap: .9rem; color: #fff; text-decoration: none; }
+  .brand img { height: 42px; width: auto; }
+  .brand__name { display: flex; flex-direction: column; line-height: 1.15; text-transform: uppercase; }
+  .brand__acronym { font-weight: 700; font-size: 1.05rem; letter-spacing: .06em; }
+  .brand__full { font-size: .72rem; letter-spacing: .03em; opacity: .92; }
+  .brand:hover { color: #fff; }
+  @media (max-width: 720px) {
+    .site-header { position: static; }
+    .utility__links a:first-child { display: none; }
+    .hide-sm { display: none; }
+    .brand__full { display: none; }
+    .topbar__cta { padding: .45rem .75rem; font-size: .8rem; }
+    .poc-flag { font-size: .72rem; }
+  }
+  @media (max-width: 400px) { .topbar__cta { display: none; } }
+</style>

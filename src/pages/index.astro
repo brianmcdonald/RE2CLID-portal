@@ -1,0 +1,166 @@
+---
+import Base from '../layouts/Base.astro';
+import PageHero from '../components/PageHero.astro';
+import Band from '../components/Band.astro';
+import Callout from '../components/Callout.astro';
+import MapPanel from '../components/MapPanel.astro';
+import CvaSection from '../components/CvaSection.astro';
+import CvaLevels from '../components/CvaLevels.svelte';
+import CalendarOverview from '../components/CalendarOverview.astro';
+import SoCard from '../components/SoCard.astro';
+import {
+  CLUSTERS, COUNTRIES, DISTRICTS, countriesIn, countryUrl, clusterUrl, districtUrl,
+  countryCalendar, districtsIn, url,
+} from '../lib/site';
+
+const links = Object.fromEntries(DISTRICTS.filter((d) => d.pcode).map((d) => [d.pcode, districtUrl(d)]));
+const calRows = COUNTRIES.map((c) => ({
+  label: c.short, sub: `Cluster ${c.cluster.slice(-1)}`, href: countryUrl(c) + '#calendars', calendar: countryCalendar(c)?.national ?? null,
+}));
+const levels = [
+  { label: 'Programme', count: 1, text: 'One harmonized regional framework and a consolidated report across both clusters, so that displacement risk can be compared between countries and fed into regional dialogue.', links: [{ label: 'Programme analysis (below)', href: '#analyses' }] },
+  { label: 'Cluster', count: CLUSTERS.length, text: 'Cluster syntheses for the Lake Tanganyika Basin and for Southern Africa & the South-West Indian Ocean, reflecting their different hazard profiles: lake-level rise and floods in one, cyclones and drought in the other.', links: CLUSTERS.map((c) => ({ label: `Cluster ${c.number}`, href: clusterUrl(c) + '#analyses' })) },
+  { label: 'Country', count: COUNTRIES.length, text: 'National multi-hazard displacement risk analyses, built with government counterparts and designed to feed national DRM, early warning and adaptation planning.', links: COUNTRIES.map((c) => ({ label: c.short, href: countryUrl(c) + '#analyses' })) },
+  { label: 'District', count: DISTRICTS.length, text: 'District profiles for the action areas: hazard exposure, livelihoods, services and displacement for each admin-2 unit (admin-1 where no admin-2 is defined).', links: DISTRICTS.slice(0, 6).map((d) => ({ label: d.name, href: districtUrl(d) })).concat([{ label: 'See all on country pages →', href: '#clusters' }]) },
+];
+---
+<!--
+  HOME PAGE. Edit the text directly in the HTML below (normal <p>, <h3>, <ul> tags).
+  Avoid typing { or } in text; write &#123; and &#125; instead.
+-->
+<Base title="RE2CLID" active="programme">
+  <PageHero
+    eyebrow="EU-funded · IOM-led · 48 months"
+    title="Regional Responses to Climate Displacement in Sub-Saharan Africa"
+    lede="RE2CLID helps displacement-affected communities in two climate hotspots, the Lake Tanganyika Basin and the Southern Africa / South-West Indian Ocean cyclone basin, become resilient and self-reliant through coordinated action at local, national and regional levels."
+    tags={['9 countries', '2 clusters', `${DISTRICTS.length} district action areas`, 'HDP Nexus']}
+  >
+    <div class="btn-row">
+      <a class="btn btn--yellow" href="#clusters">Explore the clusters</a>
+      <a class="btn btn--ghost-light" href="#analyses">Climate vulnerability analyses</a>
+    </div>
+  </PageHero>
+
+  <Band tone="white" id="about" eyebrow="The programme" title="Why RE2CLID">
+    <p>During the past 10 years, storms, floods, droughts and other weather-related disasters have caused an average of 23.8 million new annual displacements worldwide. These occur in all parts of the world but are unequally distributed. Climate change has already had a profound impact on many countries in Sub-Saharan Africa, jeopardizing ecosystems, the economy and overall well-being of populations. Sub-Saharan Africa has always been a region with high levels of human mobility. But with the impacts of climate change - e.g., increased water scarcity, reduced pasture availability, and shifts in harvesting seasons – climate migration patterns have been disrupted, and disasters have caused population displacement in countries across the region. In 2023 alone, Sub-Saharan Africa saw 19.3 million new internal displacements including 6 million due to disasters, and the region is hosting more than 34.8 million Internally Displaced Persons (IDPs) due to conflict or disaster.</p>
+    <p>The next decades will be marked by increasingly severe and frequent climate change-related extreme weather events, which pose complex challenges to sustainable development of affected countries by aggravating environmental degradation, exacerbating conflict, and triggering displacement. The latest report of the Intergovernmental Panel on Climate Change (IPCC) outlines that “climate change impacts have generated and perpetuated displacement and involuntary migration from extreme weather and climate events.” Such recurring or protracted displacement in Least Developed Countries (LDCs) has significant negative impacts on the achievement of sustainable development but also on their stability and peace. Unplanned, sudden and forced movements due to adverse impacts of climate change and environmental degradation may affect social cohesion in areas hosting displaced populations and create pressures for basic services delivery and local economies. The forced movement of people may also contribute to tensions between groups more broadly over the use of natural resources, e.g. between farmers and pastoralists, or between different ethnic groups. Populations affected by conflict, including IDPs, refugees, migrants and host communities are exposed to the adverse effects of climate change while often having reduced capacity to adapt and become resilient.</p>
+    <details class="more">
+      <summary>Read more of the regional context</summary>
+      <p>As highlighted under the EU’s Gender Action Plan, women account for 80% of the people displaced by the impacts of climate change. Internal displacements amplifies pre-existing gender inequalities. Women and children are 14 times more likely to die during disasters (UNDP, 2022). They are also more likely to face difficulties accessing climate-related information, relief and assistance, and many women are reliant on climate-sensitive livelihoods such as agriculture and yet receive inadequate and inequitable support to adapt to environmental changes. The impact is even more severe for rural women, displaced women, women with disabilities, and those from low-income or socially marginalized groups. Structural barriers—such as restricted access to resources, technologies, information, and decision-making spaces—further entrench these inequalities. Gender norms and power dynamics often exclude women from participating in decision-making processes related to natural resource management and planning. These unequal power structures and gender norms often leave them with limited capacity and tools to adapt to climate change, impeding women’s ability to leverage migration to reduce their exposure to disaster risks.</p>
+      <p>Despite these challenges, women are central actors in climate adaptation and resilience through their traditional knowledge and their role in natural resource management. However, their leadership is often overlooked due to underrepresentation in decision-making bodies and their limited access to resources and rights. Gender equality is therefore crucial for effective and inclusive resource management, strengthening conservation and women’s empowerment. Furthermore, the growth and development needs of the youth are harmed by additional challenges resulting from adverse impacts of the changing climate.</p>
+      <p>According to the Groundswell report, up to 85.7 million people in Sub-Saharan Africa could move within their own country by 2050 because of climate change in the more pessimistic scenario. Movements are expected to take place towards urban areas, which may generate a significant increase in urban vulnerabilities – including exposure to disaster risks and displacement, exacerbate existing inequalities, and reduce accessibility to services and social protection measures.</p>
+      <p>Evidence-based and decisive climate action can help reduce this trend. However, actions that address climate displacement remain a blind spot in most disaster preparedness, disaster response, disaster risk reduction and climate change adaptation policies and systems across Sub Saharan Africa, even though the region is already confronted with major displacement crises. Climate displacement can undermine the ability of individuals to adapt to the effects of climate change and can compromise their long-term resilience. On top of this, crises often lead to harmful coping mechanisms - such as early marriage, human trafficking - exacerbating the risks of gender-based violence, particularly in displacement settings.</p>
+    </details>
+    <p class="source-note">Excerpted from the RE2CLID Description of the Action (Cluster 1), section 1.1.</p>
+  </Band>
+
+  <Band tone="mist" id="objectives" eyebrow="Overall objective" title="Resilient and self-reliant displacement-affected communities">
+    <p class="lede">The overall objective of the Action is that Displacement-Affected Communities (DACs) living in areas at risk of disaster and/or adverse effects of climate change, environmental degradation and correlated stressors are resilient and self-reliant, from a human rights-based approach (HRBA), with gender and disability inclusion perspectives.</p>
+    <div class="stack">
+      <SoCard n="1" title="Disaster forecasts and displacement management" lead="IOM">
+        <p>Gender-responsive disaster forecasts and management systems to better prevent, minimize and resolve displacement are strengthened at the local, national and regional levels.</p>
+      </SoCard>
+      <SoCard n="2" title="Natural resource governance" lead="Enabel (Cluster 1) · IOM and partners (Cluster 2)">
+        <p>Natural resource governance and management benefitting displacement-affected communities (DACs) and communities at risk of future displacement are improved.</p>
+      </SoCard>
+      <SoCard n="3" title="Resilience and self-reliance" lead="IOM">
+        <p>Resilience and self-reliance of DACs in environmentally fragile areas are reinforced.</p>
+      </SoCard>
+    </div>
+    <h3 style="margin-top:2rem">Theory of change</h3>
+    <p>The underlying intervention logic for this Action is that IF national and regional Disaster Risk Reduction (DRR) systems will be implemented in identified climate and displacement hotspot areas and IF appropriate natural resource management practices will be implemented, THEN Displacement-Affected Communities will benefit from living in more resilient and environmentally safe environments BECAUSE the targeted geographic areas will be better equipped to provide the environmental protection, human security and safety that DACs need to thrive and see their lives improving in safety and dignity.</p>
+  </Band>
+
+  <Band tone="tint" id="clusters" eyebrow="Where we work" title="Two clusters, nine countries" intro="Each cluster has its own regional activities and partners. Country pages summarize the Technical Implementation Package and list the district action areas.">
+    <div class="stack">
+      {CLUSTERS.map((c) => (
+        <a class="card card--link cluster-card" href={clusterUrl(c)}>
+          <img src={url(`maps/${c.map}.jpg`)} alt="" loading="lazy" width="1520" height="1075" />
+          <div>
+            <span class="eyebrow">Cluster {c.number}</span>
+            <h3>{c.name}</h3>
+            <p class="small">{countriesIn(c.slug).map((k) => k.name).join(' · ')}</p>
+            <p class="small muted">{countriesIn(c.slug).reduce((n, k) => n + districtsIn(k.slug).length, 0)} district action areas · {c.partners}</p>
+            <span class="arrow">Open cluster page →</span>
+          </div>
+        </a>
+      ))}
+    </div>
+  </Band>
+
+  <Band tone="white" id="maps" eyebrow="Maps" title="Programme footprint" intro="Action areas from the RE2CLID action-area GeoPackage. Click a district to open its page. The reference map below covers both clusters.">
+    <MapPanel map="re2clid_all_clusters" mapTitle="RE2CLID Clusters 1 and 2" links={links} />
+  </Band>
+
+  <Band tone="mist" id="analyses" eyebrow="Climate vulnerability assessment" title="Analyses at four levels" intro="RE2CLID's CVA and multi-hazard displacement risk analysis uses one shared method at programme, cluster, country and district level. Each level will be published as its own analysis pages, PDFs and slides.">
+    <CvaLevels client:visible {levels} />
+    <div style="margin-top:2.5rem">
+      <CvaSection level="programme" name="the programme" path={['programme']} />
+    </div>
+  </Band>
+
+  <Band tone="white" id="calendars" eyebrow="Seasonal hazard calendars" title="When households are under most pressure" intro="Seasonal patterns from the ACAPS Seasonal Events Calendar help time assessments, registration and construction around rains, lean seasons and outbreaks. Open a country for the full calendar.">
+    <CalendarOverview rows={calRows} />
+    <Callout type="warning" compact>
+      <p>Many ACAPS records are more than ten years old. Check them against current FEWS NET, FAO GIEWS or national meteorological calendars before using them for planning.</p>
+    </Callout>
+  </Band>
+
+  <!-- DISASTER DISPLACEMENT INDICATORS (DDI): edit the text below -->
+  <Band tone="mist" id="ddi" eyebrow="Displacement data" title="Disaster Displacement Indicators (DDI)">
+    <p class="lede">Reliable data on disaster displacement is vital for disaster risk reduction and for adapting to the worst impacts of climate change.</p>
+    <p>IOM and the Internal Displacement Monitoring Centre (IDMC) have developed a standard set of displacement-related metrics and indicators: the Disaster Displacement Indicators. They help States build displacement into public policy and local development planning by improving how displacement impacts are collected, reported and analysed. Because the indicators are standardized, results can be compared across countries, in line with the objectives of the Sendai Framework for Disaster Risk Reduction.</p>
+    <p>The indicators have already been piloted with National Disaster Management Authorities in seven countries, including Mozambique, with funding from the German Federal Foreign Office and the US State Department's Bureau of Population, Refugees, and Migration (PRM).</p>
+
+    <h3 style="margin-top:1.75rem">What RE2CLID will do</h3>
+    <div class="stack">
+      <div class="card row-card">
+        <span class="row-card__num">C1</span>
+        <div>
+          <h3>Pilot in the Lake Tanganyika Basin</h3>
+          <p>Pilot the DDI in at least two Cluster 1 countries, based on needs identified with national authorities and regional actors such as the LTA, EAC and IGAD/ICPAC.</p>
+        </div>
+      </div>
+      <div class="card row-card">
+        <span class="row-card__num">C2</span>
+        <div>
+          <h3>Scale up in Southern Africa &amp; the South-West Indian Ocean</h3>
+          <p>Scale up the Mozambique pilot and start similar data collection in at least three SADC Member States covered by the programme.</p>
+        </div>
+      </div>
+    </div>
+
+    <h3 style="margin-top:1.75rem">How the data will be used</h3>
+    <ul>
+      <li><strong>Regional dialogue:</strong> results reported at regional and sub-regional dialogues to harmonize disaster displacement data systems.</li>
+      <li><strong>Loss and damage:</strong> reporting feeds the UNDRR–WMO–UNDP Disaster Tracking System, which counts human mobility as a non-economic loss. It may also inform the Santiago Network on Loss and Damage and the Fund for Responding to Loss and Damage (FRLD).</li>
+      <li><strong>Programme response:</strong> the data informs RE2CLID's resilience and durable-solutions work under Specific Objective 3.</li>
+    </ul>
+
+    <Callout type="pending" compact title="DDI results pending">
+      <p>Country DDI status and indicator results will be added here as pilots begin.</p>
+    </Callout>
+    <p class="source-note">Based on Activity 1.2.2 of the RE2CLID Description of the Action (Clusters 1 and 2).</p>
+  </Band>
+
+  <Band tone="tint" id="partners" eyebrow="Partnership" title="Funding and implementation">
+    <div class="card partners">
+      <img src={url('img/funded-by-eu.png')} alt="Funded by the European Union" width="200" height="54" />
+      <div>
+        <p>RE2CLID is funded by the European Union (DG INTPA) and implemented by the International Organization for Migration (IOM), with consortium partner Enabel in Cluster 1 and WFP in Mozambique.</p>
+        <p class="small muted">It works with Regional Economic Communities and regional bodies, including the EAC, ICGLR, the Lake Tanganyika Authority, SADC and the Indian Ocean Commission, as well as national governments, UN agencies, civil society and affected communities.</p>
+      </div>
+    </div>
+  </Band>
+</Base>
+
+<style>
+  .cluster-card { display: grid; grid-template-columns: 220px 1fr; gap: 1.25rem; align-items: center; }
+  .cluster-card img { border-radius: 4px; border: 1px solid var(--line); }
+  .partners { display: flex; gap: 1.5rem; align-items: center; }
+  .partners img { width: 200px; flex: 0 0 auto; }
+  @media (max-width: 640px) {
+    .cluster-card { grid-template-columns: 1fr; }
+    .partners { flex-direction: column; align-items: flex-start; }
+  }
+</style>

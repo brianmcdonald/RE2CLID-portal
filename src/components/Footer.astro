@@ -1,0 +1,83 @@
+---
+import { url, CLUSTERS, countriesIn, countryUrl, clusterUrl, EHSA_PAGE } from '../lib/site';
+const year = new Date().getFullYear();
+---
+<footer class="site-footer">
+  <div class="footer-main">
+    <div class="wrap-wide footer-grid">
+      <div class="col col--about">
+        <img src={url('img/iom-logo-white.svg')} alt="IOM UN Migration" width="138" height="47" />
+        <p class="org">RE2CLID<br />Regional Responses to Climate Displacement in Sub-Saharan Africa</p>
+        <p>A 48-month programme funded by the European Union and implemented by IOM, with Enabel (Cluster 1) and WFP (Mozambique).</p>
+        <p class="org-sm">IOM Regional Office for East, Horn and Southern Africa</p>
+        <p>Sri Aurobindo Avenue, Off Mzima Spring Road, Lavington, Nairobi, Kenya</p>
+      </div>
+
+      {CLUSTERS.map((c) => (
+        <div class="col">
+          <h2><a href={clusterUrl(c)}>Cluster {c.number} · {c.short}</a></h2>
+          <ul>
+            {countriesIn(c.slug).map((k) => <li><a href={countryUrl(k)}>{k.name}</a></li>)}
+          </ul>
+        </div>
+      ))}
+
+      <div class="col">
+        <h2>Analyses &amp; resources</h2>
+        <ul>
+          <li><a href={url('#analyses')}>Climate vulnerability assessments</a></li>
+          <li><a href={url('#calendars')}>Seasonal hazard calendars</a></li>
+          <li><a href={url('#maps')}>Programme maps</a></li>
+          <li><a href={EHSA_PAGE}>RE2CLID on ehsa.iom.int</a></li>
+        </ul>
+        <h2>Related IOM websites</h2>
+        <ul>
+          <li><a href="https://dtm.iom.int/">Displacement Tracking Matrix</a></li>
+          <li><a href="https://environmentalmigration.iom.int/">Environmental Migration Portal</a></li>
+          <li><a href="https://www.migrationdataportal.org/">Migration Data Portal</a></li>
+          <li><a href="https://crisisresponse.iom.int/">Global Crisis Response Platform</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="wrap-wide funder">
+      <img src={url('img/funded-by-eu.png')} alt="Funded by the European Union" width="180" height="48" />
+      <p class="small">This website is a proof of concept. All analyses, figures and maps are sample materials and do not represent official IOM or EU positions. The boundaries and names shown and the designations used on maps do not imply official endorsement or acceptance by IOM.</p>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="wrap-wide footer-bottom__inner">
+      <span>Copyright © {year} International Organization for Migration</span>
+      <nav aria-label="Legal">
+        <a href="https://weareallin.iom.int/">Report abuse, fraud or misconduct</a>
+        <a href="https://www.iom.int/terms-and-conditions">Terms and conditions</a>
+      </nav>
+    </div>
+  </div>
+</footer>
+
+<style>
+  .site-footer { color: #fff; font-size: .9rem; }
+  .footer-main { background: var(--iom-blue); padding: 3rem 0 2rem; }
+  .footer-grid { display: grid; grid-template-columns: 1.4fr 1fr 1fr 1.2fr; gap: 2rem; }
+  .col img { height: 40px; width: auto; margin-bottom: 1rem; }
+  .org { font-weight: 700; text-transform: uppercase; letter-spacing: .02em; line-height: 1.3; }
+  .org-sm { font-weight: 700; margin-bottom: .2rem; }
+  h2 { color: #fff; font-size: .82rem; text-transform: uppercase; letter-spacing: .05em; margin: 0 0 .75rem; }
+  h2:not(:first-child) { margin-top: 1.5rem; }
+  h2 a { color: #fff; text-decoration: none; }
+  ul { list-style: none; padding: 0; margin: 0; }
+  li { margin-bottom: .55rem; }
+  a { color: #d7e3fa; text-decoration: none; }
+  a:hover { color: #fff; text-decoration: underline; }
+  .funder { display: flex; gap: 1.5rem; align-items: center; margin-top: 2.5rem; padding-top: 1.5rem; border-top: 1px solid rgb(255 255 255 / 18%); }
+  .funder img { background: #fff; padding: 6px 10px; border-radius: 4px; height: 52px; width: auto; flex: 0 0 auto; }
+  .funder p { margin: 0; color: #c9d6f2; }
+  .footer-bottom { background: var(--iom-blue-900); padding: 1rem 0; font-size: .82rem; }
+  .footer-bottom__inner { display: flex; flex-wrap: wrap; justify-content: space-between; gap: .75rem 1.5rem; }
+  .footer-bottom nav { display: flex; gap: 1.25rem; flex-wrap: wrap; }
+  @media (max-width: 900px) { .footer-grid { grid-template-columns: 1fr 1fr; } }
+  @media (max-width: 560px) {
+    .footer-grid { grid-template-columns: 1fr; }
+    .funder { flex-direction: column; align-items: flex-start; }
+  }
+</style>

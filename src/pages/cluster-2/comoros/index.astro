@@ -1,0 +1,34 @@
+---
+import CountryPage from '../../../layouts/CountryPage.astro';
+import SoCard from '../../../components/SoCard.astro';
+---
+<!--
+  EDIT THIS PAGE'S TEXT BELOW. Write normal HTML: <p>, <strong>, <a href="…">, <ul><li>.
+  Each <Fragment slot="…"> fills one section of the page. Delete a whole Fragment to hide that section.
+  (Avoid typing { or } in text; write &#123; and &#125; instead.)
+-->
+<CountryPage country="comoros">
+
+  <!-- Hero text under the page title -->
+  <Fragment slot="lede">The Union of the Comoros is highly vulnerable to a wide range of natural hazards, including cyclones, floods, volcanic eruptions, and epidemics, with over 54% of its population living in high-risk areas.</Fragment>
+
+  <!-- Country context: shown in full -->
+  <Fragment slot="context">
+    <p>The Union of the Comoros is highly vulnerable to a wide range of natural hazards, including cyclones, floods, volcanic eruptions, and epidemics, with over 54% of its population living in high-risk areas. Environmental degradation, particularly deforestation driven by reliance on biomass, further amplifies disaster risks. The devastating impact of Tropical Cyclone Kenneth in 2019, which affected 345,000 people and displaced over 20,000, highlighted vulnerability and critical gaps in disaster preparedness and response mechanisms.</p>
+    <p>Despite efforts to establish a national disaster risk management (DRM) structure through the creation of the General Directorate of Civil Security (DGSC) and the National Platform for Disaster Risk Reduction (PNPRRC), the legal and operational frameworks remain underdeveloped, especially regarding displacement and human mobility. Local communities are insufficiently informed about climate and geological risks, and the country lacks robust systems for early warning, displacement data management, and emergency evacuation planning.</p>
+  </Fragment>
+
+  <!-- What RE2CLID will do: add one SoCard per Specific Objective, e.g.
+  <Fragment slot="response">
+    <SoCard n="1" title="Disaster forecasts &amp; displacement management">
+      <p>Text…</p>
+    </SoCard>
+  </Fragment>
+  -->
+
+  <!-- Location selection -->
+  <Fragment slot="location">
+    <p>In alignment with recommendations made in the Final Report, Grande-Comores and Anjouan islands have been identified as priority intervention areas. Specifically, the districts of Moroni-Bambao, Hambou and Mitsamiouli-Mboudé in Grande-Comores, and the district of Sima in Anjouan, have been identified as areas of concern. Additional areas and specific locations of intervention are to be agreed between the Government of Comoros, the EU Office in Comoros, and IOM.</p>
+  </Fragment>
+
+</CountryPage>

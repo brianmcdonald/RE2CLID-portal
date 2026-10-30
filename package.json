@@ -1,0 +1,17 @@
+{
+  "name": "re2clid-website",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview"
+  },
+  "dependencies": {
+    "@astrojs/svelte": "^9.1.1",
+    "astro": "^7.4.2",
+    "leaflet": "^1.9.4",
+    "svelte": "^5.57.3"
+  }
+}

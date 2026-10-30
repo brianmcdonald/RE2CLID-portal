@@ -1,0 +1,161 @@
+---
+import Base from './Base.astro';
+import PageHero from '../components/PageHero.astro';
+import Band from '../components/Band.astro';
+import Callout from '../components/Callout.astro';
+import MapPanel from '../components/MapPanel.astro';
+import CvaSection from '../components/CvaSection.astro';
+import SeasonalCalendar from '../components/SeasonalCalendar.svelte';
+import {
+  CAL_META, countryBySlug, clusterBySlug, clusterUrl, countryUrl, districtUrl, districtsIn, districtBySlug, districtCalendar, keyHazards,
+} from '../lib/site';
+
+/**
+ * Layout for a district page. The page file (src/pages/<cluster>/<country>/<district>/index.astro)
+ * picks the district and can add text:
+ *   slot "about"   optional narrative about the district (shown under "About this district")
+ *   slot "notes"   optional notes shown under the action-units table
+ * Facts, units, map, calendar and the CVA section come from src/data/places.ts and the calendar data.
+ */
+interface Props { country: string; district: string }
+const d = districtBySlug(Astro.props.country, Astro.props.district);
+const country = countryBySlug(d.country);
+const cluster = clusterBySlug(country.cluster);
+const cal = districtCalendar(d);
+const hazards = keyHazards(cal);
+const siblings = districtsIn(country.slug).filter((x) => x.slug !== d.slug);
+const levelName = d.adminLevel === 2 ? 'admin-2' : 'admin-1';
+const unitLabel: Record<string, string> = { BI: 'Commune → colline', MW: 'Traditional Authority / ward', TZ: 'Ward' };
+
+const TILES = [
+  { k: 'Population', v: null, note: 'Census / CVA baseline' },
+  { k: 'Displaced persons (IDPs)', v: null, note: 'DTM, latest round' },
+  { k: 'Households in hazard zones', v: null, note: 'CVA exposure layer' },
+  { k: 'Displacement risk class', v: null, note: 'CVA composite index' },
+];
+---
+<Base
+  title={`${d.name}, ${country.short}`}
+  active={cluster.slug}
+  crumbs={[
+    { label: `Cluster ${cluster.number}: ${cluster.short}`, href: clusterUrl(cluster) },
+    { label: country.name, href: countryUrl(country) },
+    { label: d.name },
+  ]}
+>
+  <PageHero
+    eyebrow={`${country.name} · ${d.adm1}`}
+    title={d.name}
+    lede={`District action area (${levelName}) of the RE2CLID programme in ${country.name}, Cluster ${cluster.number}: ${cluster.name}.`}
+    tags={[d.pcode ? `P-code ${d.pcode}` : 'P-code to confirm', d.units.length ? `${d.units.length} action unit${d.units.length > 1 ? 's' : ''}` : 'District-wide', ...(d.priority && d.priority !== 'selected' ? [`Priority: ${d.priority}`] : [])]}
+  />
+
+  <Band tone="white" id="profile" eyebrow="District profile" title="Profile at a glance">
+    <dl class="facts">
+      <div><dt>Country</dt><dd><a href={countryUrl(country)}>{country.name}</a></dd></div>
+      <div><dt>Admin-1</dt><dd>{d.adm1}{d.adm1Pcode && <span class="muted"> ({d.adm1Pcode})</span>}</dd></div>
+      <div><dt>{d.adminLevel === 2 ? 'Admin-2' : 'Area'}</dt><dd>{d.name}{d.pcode && <span class="muted"> ({d.pcode})</span>}</dd></div>
+      <div><dt>Seasonal hazards &amp; outbreaks</dt><dd>{hazards.length ? hazards.join(', ') : <span class="muted">No ACAPS records</span>}</dd></div>
+      <div><dt>Boundary source</dt><dd>{d.source === 'gpkg' ? 'RE2CLID action-area GeoPackage' : 'Named in country TIP (to confirm)'}</dd></div>
+    </dl>
+
+    <div class="tiles">
+      {TILES.map((t) => (
+        <div class="tile">
+          <span class="tile__k">{t.k}</span>
+          <span class="tile__v">—</span>
+          <span class="tile__n">{t.note} · <em>pending</em></span>
+        </div>
+      ))}
+    </div>
+    <Callout type="pending" compact title="Indicators pending">
+      <p>The indicator tiles are placeholders. They will be filled from the district CVA and DTM data when the analysis is published.</p>
+    </Callout>
+    {d.sourceNote && <Callout type="warning" compact title="Location to confirm"><p>{d.sourceNote}</p></Callout>}
+  </Band>
+
+  {Astro.slots.has('about') && (
+    <Band tone="white" id="about" eyebrow="District profile" title="About this district">
+      <slot name="about" />
+    </Band>
+  )}
+
+  <Band tone="mist" id="units" eyebrow="Action units" title="Where activities are targeted" intro={d.units.length ? `Sub-district units selected in the action-area GeoPackage${unitLabel[country.iso2] ? ` (${unitLabel[country.iso2]})` : ''}.` : undefined}>
+    {d.units.length ? (
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th scope="col">Unit</th><th scope="col">P-code</th>{d.units.some((u) => u.children?.length) && <th scope="col">Admin-4</th>}<th scope="col">Priority / remarks</th></tr></thead>
+          <tbody>
+            {d.units.map((u) => (
+              <tr>
+                <td><strong>{u.name}</strong></td>
+                <td class="muted">{u.pcode}</td>
+                {d.units.some((x) => x.children?.length) && <td>{u.children?.join(', ')}</td>}
+                <td>
+                  {u.priority && u.priority !== 'selected' && <span class={`tag ${u.priority === 'first priority' ? 'tag--yellow' : 'tag--grey'}`}>{u.priority}</span>}
+                  {u.remarks && <div class="small muted">{u.remarks}</div>}
+                </td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+    ) : (
+      <p>The whole district is the action area. Sub-district units have not been specified yet and will be agreed during the inception phase.</p>
+    )}
+    <slot name="notes" />
+  </Band>
+
+  <Band tone="white" id="maps" eyebrow="Map" title={`${d.name} on the map`}>
+    <MapPanel
+      map={country.map}
+      mapTitle={`RE2CLID ${country.name}`}
+      countries={[country.iso2]}
+      district={d.hasGeometry ? d.pcode : null}
+      interactive={d.hasGeometry}
+      noGeoNote={`Boundaries for ${d.name} are not yet in the action-area GeoPackage. The country reference map is shown instead.`}
+    />
+  </Band>
+
+  <Band tone="tint" id="calendars" eyebrow="Seasonal hazard calendar" title="Seasonal calendar" intro={cal?.name ? `Calendar for the ${cal.name} action area (${d.adm1Pcode}), which covers ${d.name}. Recurring patterns, not forecasts.` : 'Recurring patterns, not forecasts.'}>
+    {cal && cal.events.length ? (
+      <SeasonalCalendar client:visible tabs={[{ key: 'area', label: cal.name ?? d.adm1, calendar: cal }]} window={CAL_META.window} today={new Date().toISOString().slice(0, 10)} id={`cal-${d.slug}`} />
+    ) : (
+      <Callout type="info" title="No seasonal calendar available">
+        <p>ACAPS holds no seasonal events for {country.short}. FEWS NET, FAO GIEWS country briefs and the national meteorological service are the usual alternatives.</p>
+      </Callout>
+    )}
+  </Band>
+
+  <Band tone="white" id="analyses" eyebrow="Climate vulnerability assessment" title={`${d.name} district analysis`}>
+    <CvaSection level="district" name={d.name} path={[cluster.slug, country.slug, d.slug]} />
+  </Band>
+
+  {siblings.length > 0 && (
+    <Band tone="mist" id="more" eyebrow={country.short} title="Other districts in this country">
+      <p class="sib">{siblings.map((s) => <a class="tag" href={districtUrl(s)}>{s.name}</a>)}</p>
+      <a class="btn btn--outline" href={countryUrl(country) + '#districts'}>Back to the {country.short} district summary</a>
+    </Band>
+  )}
+</Base>
+
+<style>
+  .facts { display: grid; grid-template-columns: 1fr 1fr; gap: 0; margin: 0 0 1.5rem; border: 1px solid var(--line); border-radius: var(--radius); overflow: hidden; }
+  .facts div { padding: .7rem 1rem; border-bottom: 1px solid var(--line); }
+  .facts div:nth-child(odd) { border-right: 1px solid var(--line); }
+  .facts dt { font-size: .72rem; text-transform: uppercase; letter-spacing: .05em; color: var(--ink-3); font-weight: 700; }
+  .facts dd { margin: 0; font-weight: 600; }
+  .tiles { display: grid; grid-template-columns: repeat(4, 1fr); gap: .75rem; }
+  .tile { background: var(--mist); border-radius: var(--radius); padding: .9rem 1rem; display: flex; flex-direction: column; gap: .2rem; border-top: 3px solid var(--iom-tint-2); }
+  .tile__k { font-size: .75rem; font-weight: 700; color: var(--ink-2); }
+  .tile__v { font-size: 1.6rem; font-weight: 700; color: var(--iom-blue); line-height: 1.1; }
+  .tile__n { font-size: .72rem; color: var(--ink-3); }
+  .sib { display: flex; flex-wrap: wrap; gap: .4rem; margin-bottom: 1.25rem; }
+  .sib a { text-decoration: none; font-size: .85rem; padding: .3rem .7rem; }
+  .sib a:hover { background: var(--iom-blue); color: #fff; }
+  @media (max-width: 720px) {
+    .tiles { grid-template-columns: 1fr 1fr; }
+    .facts { grid-template-columns: 1fr; }
+    .facts div:nth-child(odd) { border-right: 0; }
+  }
+</style>

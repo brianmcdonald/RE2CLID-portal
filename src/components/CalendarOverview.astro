@@ -1,0 +1,56 @@
+---
+/**
+ * Compact month-by-month "household pressure" heat strip across several calendars
+ * (count of seasonal hazard, lean season and outbreak events active in each month).
+ */
+import { CAL_META, pressureMonths, type Calendar } from '../lib/site';
+interface Row { label: string; sub?: string; href?: string; calendar: Calendar | null }
+interface Props { rows: Row[] }
+const { rows } = Astro.props;
+const M = ['J', 'F', 'M', 'A', 'M', 'J', 'J', 'A', 'S', 'O', 'N', 'D'];
+const MONTHS = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+const head = CAL_META.window.map((ym) => {
+  const [y, m] = ym.split('-').map(Number);
+  return { short: M[m - 1], long: `${MONTHS[m - 1]} ${y}`, jan: m === 1 };
+});
+const data = rows.map((r) => ({ ...r, p: pressureMonths(r.calendar) }));
+const max = Math.max(1, ...data.flatMap((d) => d.p));
+---
+<div class="ov table-wrap">
+  <table>
+    <caption class="visually-hidden">Number of overlapping hazard, lean-season and outbreak events per month</caption>
+    <thead>
+      <tr>
+        <th scope="col" class="area-h">Area</th>
+        {head.map((h) => <th scope="col" class={`m ${h.jan ? 'jan' : ''}`} title={h.long}>{h.short}</th>)}
+      </tr>
+    </thead>
+    <tbody>
+      {data.map((r) => (
+        <tr>
+          <th scope="row" class="area">
+            {r.href ? <a href={r.href}>{r.label}</a> : r.label}
+            {r.sub && <small>{r.sub}</small>}
+          </th>
+          {r.calendar
+            ? r.p.map((v, i) => <td class={`m cell ${head[i].jan ? 'jan' : ''}`} style={`--a:${v / max};color:${v / max < 0.5 ? "#7a2e0a" : "#fff"}`} title={`${head[i].long}: ${v}`}>{v || ''}</td>)
+            : <td colspan="12" class="none">No ACAPS seasonal records</td>}
+        </tr>
+      ))}
+    </tbody>
+  </table>
+</div>
+<p class="small muted ov-note">Darker cells: more seasonal hazard, lean-season and outbreak events overlap that month. Window {head[0].long} to {head[11].long}. Source: {CAL_META.source}, compiled {CAL_META.generated}.</p>
+
+<style>
+  .ov table { font-size: .82rem; table-layout: fixed; min-width: 520px; }
+  .ov th.area-h { width: 30%; }
+  .ov th.area { background: #fff; color: var(--ink); text-transform: none; letter-spacing: 0; font-size: .85rem; width: 32%; }
+  .ov th.area small { display: block; font-weight: 400; color: var(--ink-3); font-size: .72rem; }
+  .ov th.m { text-align: center; padding: .5rem 0; }
+  .ov td.m { text-align: center; padding: 0; height: 2.2rem; font-weight: 700; font-size: .72rem; color: #fff; border-left: 1px solid #fff;
+    background: color-mix(in srgb, var(--iom-orange) calc(var(--a) * 100%), #f1f4f8); }
+  .ov .jan { box-shadow: inset 2px 0 0 var(--ink-3); }
+  .ov td.none { color: var(--ink-3); font-style: italic; background: repeating-linear-gradient(45deg, #fafbfc 0 6px, #f1f3f6 6px 12px); }
+  .ov-note { margin-top: .6rem; }
+</style>

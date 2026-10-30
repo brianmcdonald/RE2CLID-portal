@@ -1,0 +1,47 @@
+---
+/** Callout block. `poc` = proof-of-concept notice used on every page. */
+interface Props { type?: 'poc' | 'info' | 'pending' | 'warning'; title?: string; compact?: boolean }
+const { type = 'info', title, compact = false } = Astro.props;
+const defaults: Record<string, string> = {
+  poc: 'Proof of concept: sample materials only',
+  info: 'Note',
+  pending: 'Analysis pending',
+  warning: 'Check before use',
+};
+const icons: Record<string, string> = { poc: '!', info: 'i', pending: '…', warning: '!' };
+---
+<aside class={`callout callout--${type} ${compact ? 'callout--compact' : ''}`} role="note">
+  <span class="callout__icon" aria-hidden="true">{icons[type]}</span>
+  <div>
+    <p class="callout__title">{title ?? defaults[type]}</p>
+    <div class="callout__body"><slot>
+      {type === 'poc' && (
+        <p>This site is a draft for discussion. Narrative text is excerpted from the RE2CLID Description of the Action and Technical Implementation Packages; indicators, analyses and links marked as pending are placeholders. Nothing here should be cited or used for operational decisions.</p>
+      )}
+    </slot></div>
+  </div>
+</aside>
+
+<style>
+  .callout {
+    display: flex; gap: .9rem; padding: 1rem 1.15rem; border-radius: var(--radius); border: 1px solid; border-left-width: 5px;
+    background: #fff; color: var(--ink); margin: 1.25rem 0; font-size: .93rem;
+  }
+  .callout__icon {
+    flex: 0 0 auto; width: 1.6rem; height: 1.6rem; border-radius: 50%; display: grid; place-items: center;
+    font-weight: 800; font-size: .9rem; color: #fff;
+  }
+  .callout__title { font-weight: 700; margin: 0 0 .2rem; }
+  .callout__body :global(p) { margin: 0 0 .5rem; }
+  .callout__body :global(p:last-child) { margin-bottom: 0; }
+  .callout--poc { border-color: #f3c55f; border-left-color: var(--iom-yellow); background: #fff9ec; }
+  .callout--poc .callout__icon { background: var(--iom-yellow); color: var(--iom-blue-900); }
+  .callout--info { border-color: var(--iom-tint-2); border-left-color: var(--iom-light-blue); background: #f5f9ff; }
+  .callout--info .callout__icon { background: var(--iom-light-blue); font-family: Georgia, serif; }
+  .callout--pending { border-color: var(--line); border-left-color: var(--iom-mint); background: #f4fbfa; }
+  .callout--pending .callout__icon { background: var(--iom-mint); }
+  .callout--warning { border-color: #ffc9b0; border-left-color: var(--iom-orange); background: #fff6f1; }
+  .callout--warning .callout__icon { background: var(--iom-orange); }
+  .callout--compact { padding: .7rem .9rem; font-size: .86rem; margin: .75rem 0; }
+  :global(.band--blue) .callout { color: var(--ink); }
+</style>

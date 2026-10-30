@@ -1,0 +1,30 @@
+---
+import CountryPage from '../../../layouts/CountryPage.astro';
+import SoCard from '../../../components/SoCard.astro';
+---
+<!--
+  EDIT THIS PAGE'S TEXT BELOW. Write normal HTML: <p>, <strong>, <a href="…">, <ul><li>.
+  Each <Fragment slot="…"> fills one section of the page. Delete a whole Fragment to hide that section.
+  (Avoid typing { or } in text; write &#123; and &#125; instead.)
+-->
+<CountryPage country="seychelles"
+  source="Summary drawn from the Cluster 2 Description of the Action. The country TIP is not yet in the source pack.">
+
+  <!-- Hero text under the page title -->
+  <Fragment slot="lede">Natural hazards are becoming more frequent and severe in Seychelles as climate change progresses.</Fragment>
+
+  <!-- Country context: shown in full -->
+  <Fragment slot="context">
+    <p>Natural hazards are becoming more frequent and severe in Seychelles as climate change progresses. Coastal degradation, limited water resources and biodiversity loss increase vulnerability, with climate-sensitive economic sectors, food security and health especially affected.</p>
+    <p>RE2CLID works with national authorities and the Indian Ocean Commission on displacement-sensitive disaster risk management. A Technical Implementation Package for Seychelles was not included in the source pack, so this summary uses the cluster Description of the Action.</p>
+  </Fragment>
+
+  <!-- What RE2CLID will do: add one SoCard per Specific Objective, e.g.
+  <Fragment slot="response">
+    <SoCard n="1" title="Disaster forecasts &amp; displacement management">
+      <p>Text…</p>
+    </SoCard>
+  </Fragment>
+  -->
+
+</CountryPage>

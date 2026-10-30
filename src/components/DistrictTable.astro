@@ -1,0 +1,47 @@
+---
+/** District profile summary table used on country pages. */
+import { districtUrl, districtCalendar, keyHazards, pressureMonths, CAL_META, type District } from '../lib/site';
+interface Props { districts: District[] }
+const { districts } = Astro.props;
+const MONTHS = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+const peak = (p: number[]) => {
+  const max = Math.max(...p);
+  if (!max) return '—';
+  const ms = p.map((v, i) => (v === max ? i : -1)).filter((i) => i >= 0).map((i) => MONTHS[+CAL_META.window[i].split('-')[1] - 1]);
+  return ms.length > 3 ? `${ms[0]}–${ms[ms.length - 1]}` : ms.join(', ');
+};
+const rows = districts.map((d) => {
+  const cal = districtCalendar(d);
+  return { d, hazards: keyHazards(cal), peak: peak(pressureMonths(cal)) };
+});
+---
+<div class="table-wrap">
+  <table>
+    <thead>
+      <tr>
+        <th scope="col">District</th>
+        <th scope="col">Admin-1</th>
+        <th scope="col">Action units</th>
+        <th scope="col">Seasonal hazards &amp; outbreaks</th>
+        <th scope="col">Peak pressure</th>
+        <th scope="col">CVA</th>
+      </tr>
+    </thead>
+    <tbody>
+      {rows.map(({ d, hazards, peak }) => (
+        <tr>
+          <td>
+            <a href={districtUrl(d)}>{d.name}</a>
+            {d.pcode && <div class="small muted">{d.pcode}</div>}
+            {d.source === 'tip' && <span class="tag tag--orange">TIP-named · to confirm</span>}
+          </td>
+          <td>{d.adm1}</td>
+          <td>{d.units.length ? <span title={d.units.map((u) => u.name).join(', ')}>{d.units.length}</span> : <span class="muted">District-wide</span>}{d.priority && d.priority !== 'selected' && <div><span class="tag tag--mint">{d.priority}</span></div>}</td>
+          <td>{hazards.length ? hazards.join(', ') : <span class="muted">No records</span>}</td>
+          <td>{peak}</td>
+          <td><span class="tag tag--grey">Pending</span></td>
+        </tr>
+      ))}
+    </tbody>
+  </table>
+</div>

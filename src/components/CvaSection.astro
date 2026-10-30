@@ -1,0 +1,100 @@
+---
+import Callout from './Callout.astro';
+import { cvaUrl } from '../lib/site';
+
+/**
+ * Introduces the climate vulnerability assessment (CVA) at one level of the hierarchy.
+ * The analysis itself will be published later as Quarto pages / PDF / slides under /cva/…
+ */
+interface Props { level: 'programme' | 'cluster' | 'country' | 'district'; name: string; path: string[] }
+const { level, name, path } = Astro.props;
+
+const INTRO: Record<string, { lead: string; questions: string[] }> = {
+  programme: {
+    lead: 'At programme level, IOM will develop and validate a harmonized regional analytical framework for climate vulnerability and multi-hazard displacement risk, building on IOM’s Risk Index for Climate-Induced Displacement (RICD). It combines natural hazards, exposure and vulnerability into a displacement-risk estimate, with adjustments for the different contexts of Cluster 1 and Cluster 2, so that results can be compared across all nine countries.',
+    questions: [
+      'Which hazards drive displacement risk across the two clusters, and how do they compare?',
+      'Where do exposure and vulnerability overlap most across the programme footprint?',
+      'Which data gaps limit the analysis, and how should they be filled?',
+    ],
+  },
+  cluster: {
+    lead: 'The cluster CVA consolidates the country analyses into one regional view of multi-hazard displacement risk. It will feed regional policy dialogues and preparedness planning with the Regional Economic Communities, and identify where ecosystem degradation contributes significantly to displacement risk.',
+    questions: [
+      'What patterns, trends and common vulnerabilities shape displacement across the cluster?',
+      'Where are cross-border hazards and displacement risks concentrated?',
+      'Which regional preparedness, planned-relocation or durable-solutions measures does the evidence support?',
+    ],
+  },
+  country: {
+    lead: 'The country CVA applies the common methodology with national data and partners. It runs multi-hazard displacement vulnerability and risk assessments, and its results feed into risk-informed preparedness, DRR and adaptation planning at national and sub-national levels.',
+    questions: [
+      'Which districts and communities are most exposed to the main seasonal and sudden-onset hazards?',
+      'How do socio-economic vulnerability and adaptive capacity differ between action areas?',
+      'How can results be built into national DRM, early warning and anticipatory action systems?',
+    ],
+  },
+  district: {
+    lead: 'The district profile is the most local layer of the CVA. It brings together hazard exposure, livelihood dependencies, access to basic services and displacement history for the action units, and where possible repeats the assessment across the rainy and dry seasons.',
+    questions: [
+      'Which action units face the highest combined hazard exposure and vulnerability?',
+      'Which livelihoods and services are most sensitive to the seasonal calendar?',
+      'Which local capacities and plans can be strengthened to prevent or reduce displacement?',
+    ],
+  },
+};
+const DIMENSIONS = [
+  { k: 'Hazard', d: 'Sudden-onset (floods, cyclones, landslides) and slow-onset (lake-level rise, drought, degradation)' },
+  { k: 'Exposure', d: 'People, settlements, infrastructure and livelihoods in hazard-prone areas' },
+  { k: 'Vulnerability', d: 'Socio-economic sensitivity, disaggregated by sex, age and disability' },
+  { k: 'Adaptive capacity', d: 'Services, institutions, social protection and coping strategies' },
+  { k: 'Displacement risk', d: 'Combined likelihood and scale of disaster displacement' },
+];
+const intro = INTRO[level];
+const base = cvaUrl(...path);
+const formats = [
+  { label: 'Analysis report', fmt: 'Quarto web page', href: base },
+  { label: 'Summary brief', fmt: 'PDF', href: `${base}brief.pdf` },
+  { label: 'Briefing slides', fmt: 'Quarto Reveal.js slides', href: `${base}slides/` },
+];
+---
+<div class="cva">
+  <p class="lede-sm">{intro.lead}</p>
+
+  <h3>Questions the {level} analysis will answer</h3>
+  <ol class="questions">{intro.questions.map((q) => <li>{q}</li>)}</ol>
+
+  <h3>Analytical dimensions</h3>
+  <ul class="dims">
+    {DIMENSIONS.map((x, i) => (
+      <li><span class="dims__n">{i + 1}</span><span><strong>{x.k}</strong><br /><span class="muted small">{x.d}</span></span></li>
+    ))}
+  </ul>
+
+  <h3>Outputs for {name}</h3>
+  <ul class="outputs">
+    {formats.map((f) => (
+      <li>
+        <span><strong>{f.label}</strong> <span class="muted small">· {f.fmt}</span></span>
+        <span class="tag tag--grey" title={`Will be published at ${f.href}`}>Pending</span>
+      </li>
+    ))}
+  </ul>
+  <Callout type="pending" compact>
+    <p>The {level}-level analysis has not been published yet. Quarto outputs will be placed at <code>{base}</code>, and this section will then link to them.</p>
+  </Callout>
+</div>
+
+<style>
+  .lede-sm { font-size: 1.05rem; color: var(--ink-2); }
+  h3 { margin-top: 1.6rem; }
+  .questions { padding-left: 1.2rem; }
+  .questions li { margin-bottom: .35rem; }
+  .dims { list-style: none; padding: 0; margin: 0; display: grid; gap: .5rem; }
+  .dims li { display: flex; gap: .8rem; align-items: flex-start; background: #fff; border: 1px solid var(--line); border-radius: var(--radius); padding: .65rem .9rem; }
+  .dims__n { flex: 0 0 auto; width: 1.6rem; height: 1.6rem; display: grid; place-items: center; border-radius: 50%; background: var(--iom-tint-1); color: var(--iom-blue); font-weight: 700; font-size: .8rem; }
+  .outputs { list-style: none; padding: 0; margin: 0; border: 1px solid var(--line); border-radius: var(--radius); background: #fff; }
+  .outputs li { display: flex; justify-content: space-between; align-items: center; gap: 1rem; padding: .7rem 1rem; }
+  .outputs li + li { border-top: 1px solid var(--line); }
+  code { font-size: .82rem; background: #fff; padding: .05rem .3rem; border-radius: 3px; border: 1px solid var(--line); word-break: break-all; }
+</style>

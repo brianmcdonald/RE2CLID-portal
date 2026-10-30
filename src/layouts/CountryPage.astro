@@ -1,0 +1,115 @@
+---
+import Base from './Base.astro';
+import PageHero from '../components/PageHero.astro';
+import Band from '../components/Band.astro';
+import Callout from '../components/Callout.astro';
+import MapPanel from '../components/MapPanel.astro';
+import CvaSection from '../components/CvaSection.astro';
+import DistrictTable from '../components/DistrictTable.astro';
+import SeasonalCalendar from '../components/SeasonalCalendar.svelte';
+import {
+  CAL_META, countryBySlug, clusterBySlug, clusterUrl, countryCalendar, districtsIn, districtUrl,
+} from '../lib/site';
+
+/**
+ * Layout for a country page. The page file (src/pages/<cluster>/<country>/index.astro) supplies the text:
+ *   slot "lede"          hero text
+ *   slot "context"       country context, shown in full
+ *   slot "context-more"  extra context, shown behind "Read more"
+ *   slot "response"      what RE2CLID will do (use <SoCard> blocks)
+ *   slot "location"      location selection text
+ * Districts, maps, calendars and the CVA section are added automatically.
+ */
+interface Props { country: string; source?: string }
+const country = countryBySlug(Astro.props.country);
+const source = Astro.props.source ?? `Excerpted from the RE2CLID Technical Implementation Package: ${country.name} (indicative; may change during inception).`;
+const cluster = clusterBySlug(country.cluster);
+const districts = districtsIn(country.slug);
+const cc = countryCalendar(country);
+const links = Object.fromEntries(districts.filter((d) => d.pcode).map((d) => [d.pcode, districtUrl(d)]));
+const hasGeo = districts.some((d) => d.hasGeometry);
+
+const tabs = cc
+  ? [
+      ...(cc.national ? [{ key: 'national', label: 'National', calendar: cc.national }] : []),
+      ...Object.entries(cc.areas).map(([k, a]) => ({ key: k, label: `${(a as any).name} (${k})`, calendar: a })),
+    ]
+  : [];
+
+---
+<Base
+  title={country.name}
+  active={cluster.slug}
+  crumbs={[{ label: `Cluster ${cluster.number}: ${cluster.short}`, href: clusterUrl(cluster) }, { label: country.name }]}
+>
+  <PageHero
+    eyebrow={`Cluster ${cluster.number} · ${cluster.short}`}
+    title={country.name}
+    tags={[districts.length ? `${districts.length} district action area${districts.length > 1 ? 's' : ''}` : 'Districts to be confirmed', `Partners: ${country.partners}`]}
+  >
+    <slot name="lede" slot="lede" />
+  </PageHero>
+
+  <Band tone="white" id="context" eyebrow="Country context" title={`Climate displacement in ${country.short}`}>
+    <slot name="context" />
+    {Astro.slots.has('context-more') && (
+      <details class="more">
+        <summary>Read the full country context</summary>
+        <slot name="context-more" />
+      </details>
+    )}
+    <p class="source-note">{source}</p>
+  </Band>
+
+  <Band tone="mist" id="response" eyebrow="Response" title="What RE2CLID will do">
+    {Astro.slots.has('response') ? <div class="stack"><slot name="response" /></div> : (
+      <Callout type="info" compact title="Response summary to follow">
+        <p>The summary of the response for each specific objective will be added from the country Technical Implementation Package.</p>
+      </Callout>
+    )}
+    {Astro.slots.has('location') && (
+      <>
+        <h3 style="margin-top:2rem">Location selection</h3>
+        <slot name="location" />
+      </>
+    )}
+  </Band>
+
+  <Band tone="white" id="districts" eyebrow="District profiles" title="District profile summary" intro="Districts (admin-2) in the RE2CLID action areas, with the seasonal hazards and peak-pressure months from their action-area calendar. CVA results will be added as each district analysis is completed.">
+    {districts.length ? <DistrictTable districts={districts} /> : (
+      <Callout type="info" compact title="No district action areas defined yet">
+        <p>Action areas for {country.short} are not yet in the action-area GeoPackage or named in the source material. Work here is at national level for now.</p>
+      </Callout>
+    )}
+    {districts.some((d) => d.source === 'tip') && (
+      <Callout type="warning" compact title="Districts to confirm">
+        <p>Districts marked “TIP-named” are taken from the country Technical Implementation Package and are not yet in the action-area GeoPackage. Their names, administrative level and boundaries need confirming.</p>
+      </Callout>
+    )}
+  </Band>
+
+  <Band tone="tint" id="maps" eyebrow="Maps" title={`${country.short} action areas`} intro={hasGeo ? 'Click a district to open its profile.' : undefined}>
+    <MapPanel
+      map={country.map}
+      mapTitle={`RE2CLID ${country.name}`}
+      countries={[country.iso2]}
+      links={links}
+      interactive={hasGeo}
+      noGeoNote={`The action-area GeoPackage does not yet include boundaries for ${country.short}. The reference map below shows the country in its cluster.`}
+    />
+  </Band>
+
+  <Band tone="white" id="calendars" eyebrow="Seasonal hazard calendar" title="Seasonal calendar" intro="Recurring seasonal hazards, agricultural seasons, lean periods and outbreaks. Switch between the national calendar and each action area, and use the chips to filter categories.">
+    {tabs.length ? (
+      <SeasonalCalendar client:visible tabs={tabs} window={CAL_META.window} today={new Date().toISOString().slice(0, 10)} id={`cal-${country.slug}`} />
+    ) : (
+      <Callout type="info" title="No seasonal calendar available">
+        <p>{cc?.note ?? 'ACAPS holds no seasonal events for this country.'}</p>
+      </Callout>
+    )}
+  </Band>
+
+  <Band tone="mist" id="analyses" eyebrow="Climate vulnerability assessment" title={`${country.short} country analysis`}>
+    <CvaSection level="country" name={country.name} path={[cluster.slug, country.slug]} />
+  </Band>
+</Base>

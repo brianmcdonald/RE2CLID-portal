@@ -1,0 +1,37 @@
+---
+import ActionAreaMap from './ActionAreaMap.svelte';
+import Callout from './Callout.astro';
+import { url } from '../lib/site';
+
+interface Props {
+  map?: string;            // basename of the reference map in public/maps (jpg + pdf)
+  mapTitle?: string;
+  countries?: string[];    // ISO2 codes for the interactive map
+  district?: string | null;
+  links?: Record<string, string>;
+  interactive?: boolean;
+  noGeoNote?: string;
+}
+const { map, mapTitle = 'Reference map', countries = [], district = null, links = {}, interactive = true, noGeoNote } = Astro.props;
+---
+<div class="stack">
+  {interactive ? (
+    <ActionAreaMap client:visible geoBase={url('data/geo/')} {countries} {district} {links} />
+  ) : noGeoNote ? (
+    <Callout type="info" title="Action-area boundaries not yet available" compact>
+      <p>{noGeoNote}</p>
+    </Callout>
+  ) : null}
+
+  {map && (
+    <figure class="figure">
+      <a href={url(`maps/${map}.pdf`)} aria-label={`Open the ${mapTitle} PDF`}>
+        <img src={url(`maps/${map}.jpg`)} alt={mapTitle} loading="lazy" width="1520" height="1075" />
+      </a>
+      <figcaption>
+        <span>{mapTitle} · IOM, published 21 October 2026 (version 1). Sample map for illustration only.</span>
+        <a class="btn btn--outline" href={url(`maps/${map}.pdf`)} download>Download PDF</a>
+      </figcaption>
+    </figure>
+  )}
+</div>

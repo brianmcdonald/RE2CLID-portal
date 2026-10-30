@@ -1,0 +1,18 @@
+---
+/**
+ * Card for one Specific Objective. Usage in a page:
+ *   <SoCard n="1" title="Disaster forecasts & displacement management">
+ *     <p>Text…</p>
+ *   </SoCard>
+ */
+interface Props { n: string | number; title: string; lead?: string }
+const { n, title, lead } = Astro.props;
+---
+<div class="card row-card">
+  <span class="row-card__num">SO{n}</span>
+  <div>
+    <h3>{title}</h3>
+    <slot />
+    {lead && <span class="tag">Lead: {lead}</span>}
+  </div>
+</div>

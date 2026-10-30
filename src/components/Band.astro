@@ -1,0 +1,18 @@
+---
+/** Full-width colour band containing a single centred column. */
+interface Props { tone?: 'white' | 'mist' | 'tint' | 'blue'; id?: string; eyebrow?: string; title?: string; intro?: string; wide?: boolean }
+const { tone = 'white', id, eyebrow, title, intro, wide = false } = Astro.props;
+---
+<section class={`band band--${tone}`} id={id} aria-labelledby={title && id ? `${id}-title` : undefined}>
+  <div class={wide ? 'wrap-wide' : 'wrap'}>
+    {(title || eyebrow) && (
+      <header class="band__head">
+        {eyebrow && <span class="eyebrow">{eyebrow}</span>}
+        {title && <h2 id={id ? `${id}-title` : undefined}>{title}</h2>}
+        {intro && <p>{intro}</p>}
+        <slot name="head" />
+      </header>
+    )}
+    <slot />
+  </div>
+</section>

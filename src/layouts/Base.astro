@@ -1,0 +1,37 @@
+---
+import '../styles/global.css';
+import Header from '../components/Header.astro';
+import Breadcrumb, { type Crumb } from '../components/Breadcrumb.astro';
+import Footer from '../components/Footer.astro';
+import { url } from '../lib/site';
+
+interface Props { title: string; description?: string; crumbs?: Crumb[]; active?: string }
+const { title, description = 'RE2CLID – Regional Responses to Climate Displacement in Sub-Saharan Africa. Proof-of-concept site with sample materials.', crumbs = [], active } = Astro.props;
+const fullTitle = title === 'RE2CLID' ? 'RE2CLID | Regional Responses to Climate Displacement in Sub-Saharan Africa' : `${title} | RE2CLID`;
+---
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <!-- Add ?screenshot to any page URL to unpin the header for full-page screenshots -->
+    <script is:inline>if (/[?&]screenshot\b/.test(location.search)) document.documentElement.classList.add('screenshot');</script>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{fullTitle}</title>
+    <meta name="description" content={description} />
+    <!-- Keep search engines from indexing this proof-of-concept site -->
+    <meta name="robots" content="noindex, nofollow" />
+    <link rel="icon" href={url('img/favicon.svg')} type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <Header active={active} />
+    {crumbs.length > 0 && <Breadcrumb items={crumbs} />}
+    <main id="main">
+      <slot />
+    </main>
+    <Footer />
+  </body>
+</html>

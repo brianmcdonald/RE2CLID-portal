@@ -1,0 +1,106 @@
+---
+import Base from './Base.astro';
+import PageHero from '../components/PageHero.astro';
+import Band from '../components/Band.astro';
+import Callout from '../components/Callout.astro';
+import MapPanel from '../components/MapPanel.astro';
+import CvaSection from '../components/CvaSection.astro';
+import CalendarOverview from '../components/CalendarOverview.astro';
+import {
+  clusterBySlug, countriesIn, countryUrl, districtsIn, districtUrl, countryCalendar, keyHazards,
+} from '../lib/site';
+
+/**
+ * Layout for a cluster page. The page file (src/pages/cluster-N/index.astro) supplies the text:
+ *   slot "lede"          hero text
+ *   slot "context"       regional context, shown in full
+ *   slot "context-more"  extra context, shown behind "Read more"
+ *   slot "ddi"           Disaster Displacement Indicators section (optional)
+ *   slot "regional"      regional partners / engagement section
+ */
+interface Props { cluster: string; source?: string }
+const cluster = clusterBySlug(Astro.props.cluster);
+const source = Astro.props.source ?? `Excerpted from the RE2CLID Description of the Action, Cluster ${cluster.number}, section 1.1.`;
+const countries = countriesIn(cluster.slug);
+const districts = countries.flatMap((c) => districtsIn(c.slug));
+const links = Object.fromEntries(districts.filter((d) => d.pcode).map((d) => [d.pcode, districtUrl(d)]));
+
+const calRows = countries.flatMap((c) => {
+  const cc = countryCalendar(c);
+  const rows = [{ label: c.short, sub: 'National', href: countryUrl(c) + '#calendars', calendar: cc?.national ?? null }];
+  for (const [k, a] of Object.entries(cc?.areas ?? {})) rows.push({ label: `${c.short}: ${(a as any).name}`, sub: `Action area ${k}`, href: countryUrl(c) + '#calendars', calendar: a as any });
+  return rows;
+});
+---
+<Base title={`Cluster ${cluster.number}: ${cluster.name}`} active={cluster.slug} crumbs={[{ label: `Cluster ${cluster.number}: ${cluster.short}` }]}>
+  <PageHero
+    eyebrow={`Cluster ${cluster.number}`}
+    title={cluster.name}
+    tags={[`${countries.length} countries`, `${districts.length} district action areas`]}
+  >
+    <slot name="lede" slot="lede" />
+  </PageHero>
+
+  <Band tone="white" id="context" eyebrow="Regional context" title="Climate and displacement in the cluster">
+    <slot name="context" />
+    {Astro.slots.has('context-more') && (
+      <details class="more">
+        <summary>Read the full cluster context</summary>
+        <slot name="context-more" />
+      </details>
+    )}
+    <p class="source-note">{source}</p>
+  </Band>
+
+  <Band tone="tint" id="countries" eyebrow="Countries" title={`Countries in Cluster ${cluster.number}`}>
+    <div class="stack">
+      {countries.map((c) => {
+        const ds = districtsIn(c.slug);
+        const cal = countryCalendar(c)?.national ?? null;
+        const hz = keyHazards(cal);
+        return (
+          <a class="card card--link country-row" href={countryUrl(c)}>
+            <div class="country-row__head">
+              <h3>{c.name}</h3>
+              <span class="arrow">→</span>
+            </div>
+            <p class="small">{c.blurb}</p>
+            <p class="meta">
+              <span class="tag">{ds.length ? `${ds.length} district${ds.length > 1 ? 's' : ''}` : 'Districts to be confirmed'}</span>
+              {hz.slice(0, 3).map((h) => <span class="tag tag--grey">{h}</span>)}
+              <span class="tag tag--mint">{c.partners}</span>
+            </p>
+          </a>
+        );
+      })}
+    </div>
+  </Band>
+
+  <Band tone="white" id="maps" eyebrow="Maps" title="Cluster action areas" intro="Click a district to open its page.">
+    <MapPanel map={cluster.map} mapTitle={`RE2CLID Cluster ${cluster.number}: ${cluster.name}`} countries={countries.map((c) => c.iso2 === 'CD' ? 'CD' : c.iso2)} links={links} />
+  </Band>
+
+  <Band tone="mist" id="analyses" eyebrow="Climate vulnerability assessment" title={`Cluster ${cluster.number} analysis`}>
+    <CvaSection level="cluster" name={`Cluster ${cluster.number}`} path={[cluster.slug]} />
+  </Band>
+
+  <Band tone="white" id="calendars" eyebrow="Seasonal hazard calendars" title="Seasonal pressure across the cluster" intro="National and action-area calendars side by side. Open a country page for the full interactive calendar.">
+    <CalendarOverview rows={calRows} />
+  </Band>
+
+  {Astro.slots.has('ddi') && (
+    <Band tone="mist" id="ddi" eyebrow="Displacement data" title="Disaster Displacement Indicators (DDI)">
+      <slot name="ddi" />
+    </Band>
+  )}
+
+  <Band tone="tint" id="regional" eyebrow="Regional engagement" title="Regional partners">
+    <slot name="regional" />
+  </Band>
+</Base>
+
+<style>
+  .country-row__head { display: flex; justify-content: space-between; align-items: baseline; gap: 1rem; }
+  .country-row p { margin-bottom: .6rem; }
+  .meta { display: flex; flex-wrap: wrap; gap: .35rem; margin: 0; }
+</style>

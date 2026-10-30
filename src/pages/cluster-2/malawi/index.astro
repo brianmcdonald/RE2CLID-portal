@@ -1,0 +1,45 @@
+---
+import CountryPage from '../../../layouts/CountryPage.astro';
+import SoCard from '../../../components/SoCard.astro';
+---
+<!--
+  EDIT THIS PAGE'S TEXT BELOW. Write normal HTML: <p>, <strong>, <a href="…">, <ul><li>.
+  Each <Fragment slot="…"> fills one section of the page. Delete a whole Fragment to hide that section.
+  (Avoid typing { or } in text; write &#123; and &#125; instead.)
+-->
+<CountryPage country="malawi">
+
+  <!-- Hero text under the page title -->
+  <Fragment slot="lede">Malawi is exposed to a wide variety of natural hazards that include floods, strong winds, dry spells, cyclones, earthquakes, and landslides.</Fragment>
+
+  <!-- Country context: shown in full -->
+  <Fragment slot="context">
+    <p>Malawi is exposed to a wide variety of natural hazards that include floods, strong winds, dry spells, cyclones, earthquakes, and landslides. Over the past fifty years, Malawi has experienced more than 20 major flooding incidents and eight droughts; it is regularly hit by torrential rainfall, tropical cyclones, occurring almost annually with increasing frequency and intensity in recent years. Malawi’s high level of vulnerability can be attributed to other geo-climatic factors such as the influence of El Niño and La Niña phenomena on climate variability along with the variability in water levels in the country’s three major lakes. Other contributing factors which add to its vulnerability to disasters include rapid population growth, poverty, unsustainable rapid urbanisation and poor urban planning (with an annual increase of 4.2%, Malawi has one of the highest urbanisation growth rates in Africa), and environmental degradation. The impact of extreme weather events have been substantial—hindering people’s lives, livelihoods, the country’s economy, damaging infrastructure and leading to large scale population displacement. In 2019, Cyclone Idai killed 60 people and displaced over 90,000; In 2022, Malawi was the country most affected by disaster displacement in Southern Africa with 297,000 displacements caused by back-to-back storms and cyclones. In 2023, Tropical Cyclone Freddy brought sudden flash floods and landslides, particularly in the southern districts. At least 2,267,4581 people were affected, of whom 659,278 were displaced to 747 camps. At least 56 per cent of the affected were children and 7.2 per cent were people living with disabilities. The 2023 - 2024 drought, linked with El Niño conditions, had a devastating effect, with Malawi considered as the country having the highest number of affected people across Southern Africa (6 million), and effects continue to be experienced in 2025. As part of the DTM drought assessment deployed in Southern Malawi in November 2024, 410,000 movements were reported over the past year, 65% female,– with 99% of these movements related to drought and flooding.</p>
+    <p>The impact of extreme weather phenomenon in Malawi are likely to increase and result in repeated population displacement. Comprehensive action is required to support solutions to this displacement and build resilience of communities to displacement risks due to climatic shocks, including for communities already confronted to multiple vulnerabilities. Indeed, disasters disproportionately impact women, children, and persons with disabilities due to pre-existing vulnerabilities and limited access to essential services – women and children represented 80% of movements captured in the last DTM drought assessment.</p>
+  </Fragment>
+
+  <!-- More context: shown behind "Read the full country context" -->
+  <Fragment slot="context-more">
+    <p>In addition to being confronted to population displacing due to disasters, Malawi also hosts about 57,000 refugees and asylum seekers, the majority of whom are resident in Dzaleka refugee camp. The camp is severely overcrowded, and the presence of refugees has put a lot of pressure on the environment, leading to a competition for natural resources between the refugees and the host communities, often a source of tension and social instability.</p>
+    <p>The action will be anchored under Department of Disaster Management Affairs (DoDMA) as the principal Government counterpart on this programme. IOM and its partners will further collaborate closely with the Ministry of Natural Resources, and Ministry of Lands and Local Government Implementation of the activities across the three SOs will be through a combination of direct implementation by IOM and by implementing partners. IOM Malawi envisages the Malawi Red Cross Society, with support from the IFRC, will be the main implementing partner for this Action. The contracting of implementing partners including the allocation of areas of focus will be finalized during the project inception phase. IOM will also collaborate with local women’s organizations and organizations of persons with disabilities (OPD), as well as the government agency, Malawi Council of Disability Affairs (MACODA), to ensure the incorporation of inclusion considerations in all activities.</p>
+  </Fragment>
+
+  <!-- What RE2CLID will do: one SoCard per Specific Objective -->
+  <Fragment slot="response">
+    <SoCard n="1" title="Disaster forecasts &amp; displacement management">
+      <p>To achieve this Objective, IOM will strengthen national and local capacities—particularly district councils, DoDMA, and the Ministry of Lands—to better manage disaster displacement in line with the Disaster Risk Management Act. This includes building in-country expertise and integrating displacement into DRM systems and policies (Output 1.1). Output 1.2 focuses on enhancing data collection, analysis, and use for risk-informed planning, including through early warning systems and Anticipatory Action. Output 1.3 will improve last-mile delivery of early warnings to disaster-prone communities, including DACs—collectively enhancing preparedness and resilience to displacement risks.</p>
+    </SoCard>
+    <SoCard n="2" title="Natural resource governance">
+      <p>To achieve this Objective, IOM will strengthen national and local capacities for sustainable land, forest, and water management, directly linking ecosystem restoration efforts to displacement risk reduction and durable solutions. The Government of Malawi, with support from development partners, has been implementing various initiatives aimed at restoring degraded ecosystems and improving community resilience, including the Malawi Watershed Services Improvement Project (MWASIP), Ulimi ndi Chilengedwe (UCHI) Project, Climate Smart – Enhanced Public Works Programme (CS-EPWP), Malawi Resilience and Disaster Risk Management Project (MRDRMP), and the Regional Climate Resilience Programme (RCRP). These programmes have laid important groundwork for ecosystem restoration and nature-based solutions. The RE2CLID Action will complement these initiatives by directly linking natural resource management to displacement risk reduction, durable solutions – with Activities implemented under SO2 and SO3 being part of a holistic package to provide solutions to DACs.</p>
+    </SoCard>
+    <SoCard n="3" title="Resilience &amp; self-reliance">
+      <p>The programme enhances DAC resilience and self-reliance by integrating them into disaster response, recovery, and social protection systems. Key interventions include climate-resilient housing, durable solutions planning, and inclusive infrastructure rehabilitation. Multi-sectoral assessments will inform evidence-based support and build local capacities. DACs will access green finance, employment schemes, and climate-adaptive livelihoods to foster long-term sustainability. The approach promotes both immediate recovery and long-term solutions for displaced and host communities.</p>
+    </SoCard>
+  </Fragment>
+
+  <!-- Location selection -->
+  <Fragment slot="location">
+    <p>In alignment with recommendations made in the Regional Responses to Climate Displacement (RE2CDLID) Final Report, the Action will target Nsanje, Chikwawa, Mangochi, Mulanje, and Phalombe districts and Blantyre District and Blantyre City in Southern Malawi with additional interventions in Dowa district in the areas encompassing Dzaleka refugee camp. Locations for the sub-national activities will be finalized during the inception phase of the project, and agreed between the Government of Malawi, the EUD, and IOM and the implementing partners.</p>
+  </Fragment>
+
+</CountryPage>

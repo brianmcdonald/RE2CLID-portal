@@ -1,0 +1,3576 @@
+{
+ "meta": {
+  "generated": "21 October 2026",
+  "window": [
+   "2026-10",
+   "2026-11",
+   "2026-12",
+   "2027-01",
+   "2027-02",
+   "2027-03",
+   "2027-04",
+   "2027-05",
+   "2027-06",
+   "2027-07",
+   "2027-08",
+   "2027-09"
+  ],
+  "source": "ACAPS Seasonal Events Calendar"
+ },
+ "countries": {
+  "Burundi": {
+   "national": {
+    "title": "Burundi – national seasonal calendar (Oct 2026 – Sep 2027)",
+    "prose": [
+     "ACAPS lists 20 seasonal events for Burundi, all of them country-wide.",
+     "The recorded seasonal hazards are the rainy season (Sep–Dec)[^BDI-1] and the rainy season (Feb–Apr)[^BDI-1]. Planting and growing periods: Main planting – Maize (Sep–Oct)[^BDI-2], Main planting – Sorghum (Sep–Oct)[^BDI-2], Main planting – Land preparation (Oct–Jan)[^BDI-1], 2nd planting – Maize (Feb–Mar)[^BDI-2], 2nd planting – Sorghum (Feb–Mar)[^BDI-2], 2nd planting – Land preparation (Mar–May)[^BDI-1] and 3rd planting – Land preparation (Jun–Aug)[^BDI-1]. Harvests: the 3rd harvest (Sep–Nov)[^BDI-1], the main harvest (Dec–Feb)[^BDI-1], the main harvest – Maize (Jan–Feb)[^BDI-2], the main harvest – Sorghum (Jan–Feb)[^BDI-2], the 2nd harvest – Sorghum (Jun–Jul)[^BDI-2], the 2nd harvest (Jun–Aug)[^BDI-1] and the 2nd harvest – Maize (Jun–Jul)[^BDI-2]. The lean season runs from September to December[^BDI-1] and from February to May[^BDI-1]. Disease outbreaks follow a seasonal pattern: malaria (Oct–Dec)[^BDI-3] and malaria (Mar–May)[^BDI-3]."
+    ],
+    "indicative": "Pressure on households is likely to peak from September to December and from February to May, when the lean season coincides with malaria and the rainy season. No wet-season hazard, outbreak or lean season is recorded in January and from June to August, making this the likeliest window for field activities such as assessments, registration or construction.",
+    "sources_note": "The 20 records come from 3 sources dated 2013 to 2023. Entries more than 10 years old should be checked against current FEWS NET, FAO GIEWS or national meteorological calendars before use in planning.",
+    "units": [],
+    "events": [
+     {
+      "section": "Seasonal hazard",
+      "label": "Rainy season",
+      "span": "Sep–Dec",
+      "bars": [
+       [
+        0,
+        2
+       ],
+       [
+        11,
+        11
+       ]
+      ]
+     },
+     {
+      "section": "Seasonal hazard",
+      "label": "Rainy season",
+      "span": "Feb–Apr",
+      "bars": [
+       [
+        4,
+        6
+       ]
+      ]
+     },
+     {
+      "section": "Planting and growing",
+      "label": "Main planting – Land preparation",
+      "span": "Oct–Jan",
+      "bars": [
+       [
+        0,
+        3
+       ]
+      ]
+     },
+     {
+      "section": "Planting and growing",
+      "label": "Main planting – Maize",
+      "span": "Sep–Oct",
+      "bars": [
+       [
+        0,
+        0
+       ],
+       [
+        11,
+        11
+       ]
+      ]
+     },
+     {
+      "section": "Planting and growing",
+      "label": "Main planting – Sorghum",
+      "span": "Sep–Oct",
+      "bars": [
+       [
+        0,
+        0
+       ],
+       [
+        11,
+        11
+       ]
+      ]
+     },
+     {
+      "section": "Planting and growing",
+      "label": "2nd planting – Maize",
+      "span": "Feb–Mar",
+      "bars": [
+       [
+        4,
+        5
+       ]
+      ]
+     },
+     {
+      "section": "Planting and growing",
+      "label": "2nd planting – Sorghum",
+      "span": "Feb–Mar",
+      "bars": [
+       [
+        4,
+        5
+       ]
+      ]
+     },
+     {
+      "section": "Planting and growing",
+      "label": "2nd planting – Land preparation",
+      "span": "Mar–May",
+      "bars": [
+       [
+        5,
+        7
+       ]
+      ]
+     },
+     {
+      "section": "Planting and growing",
+      "label": "3rd planting – Land preparation",
+      "span": "Jun–Aug",
+      "bars": [
+       [
+        8,
+        10
+       ]
+      ]
+     },
+     {
+      "section": "Harvest",
+      "label": "3rd harvest",
+      "span": "Sep–Nov",
+      "bars": [
+       [
+        0,
+        1
+       ],
+       [
+        11,
+        11
+       ]
+      ]
+     },
+     {
+      "section": "Harvest",
+      "label": "Main harvest",
+      "span": "Dec–Feb",
+      "bars": [
+       [
+        2,
+        4
+       ]
+      ]
+     },
+     {
+      "section": "Harvest",
+      "label": "Main harvest – Maize",
+      "span": "Jan–Feb",
+      "bars": [
+       [
+        3,
+        4
+       ]
+      ]
+     },
+     {
+      "section": "Harvest",
+      "label": "Main harvest – Sorghum",
+      "span": "Jan–Feb",
+      "bars": [
+       [
+        3,
+        4
+       ]
+      ]
+     },
+     {
+      "section": "Harvest",
+      "label": "2nd harvest",
+      "span": "Jun–Aug",
+      "bars": [
+       [
+        8,
+        10
+       ]
+      ]
+     },
+     {
+      "section": "Harvest",
+      "label": "2nd harvest – Maize",
+      "span": "Jun–Jul",
+      "bars": [
+       [
+        8,
+        9
+       ]
+      ]
+     },
+     {
+      "section": "Harvest",
+      "label": "2nd harvest – Sorghum",
+      "span": "Jun–Jul",
+      "bars": [
+       [
+        8,
+        9
+       ]
+      ]
+     },
+     {
+      "section": "Lean season",
+      "label": "Lean season",
+      "span": "Sep–Dec",
+      "bars": [
+       [
+        0,
+        2
+       ],
+       [
+        11,
+        11
+       ]
+      ]
+     },
+     {
+      "section": "Lean season",
+      "label": "Lean season",
+      "span": "Feb–May",
+      "bars": [
+       [
+        4,
+        7
+       ]
+      ]
+     },
+     {
+      "section": "Outbreak",
+      "label": "Malaria",
+      "span": "Oct–Dec",
+      "bars": [
+       [
+        0,
+        2
+       ]
+      ]
+     },
+     {
+      "section": "Outbreak",
+      "label": "Malaria",
+      "span": "Mar–May",
+      "bars": [
+       [
+        5,
+        7
+       ]
+      ]
+     }
+    ],
+    "footnotes": {
+     "BDI-1": {
+      "text": "FEWS NET (2013-12-18), via ACAPS Seasonal Events Calendar.",
+      "url": "https://fews.net/fr/east-africa/burundi"
+     },
+     "BDI-2": {
+      "text": "USDA (2023-02-08), via ACAPS Seasonal Events Calendar.",
+      "url": "https://ipad.fas.usda.gov/countrysummary/Default.aspx?id=BY"
+     },
+     "BDI-3": {
+      "text": "Severe Malaria Observatory (2023-04-13), via ACAPS Seasonal Events Calendar.",
+      "url": "https://www.severemalaria.org/fr/pays/burundi"
+     }
+    }
+   },
+   "areas": {
+    "BI2": {
+     "title": "Bujumbura (Burundi) – seasonal calendar (Oct 2026 – Sep 2027)",
+     "prose": [
+      "None of ACAPS's sub-national records fall within Bujumbura, so this calendar shows only the 20 country-wide events and matches the national pattern.",
+      "The recorded seasonal hazards are the rainy season (Sep–Dec)[^BDI-BI2-1] and the rainy season (Feb–Apr)[^BDI-BI2-1]. Planting and growing periods: Main planting – Maize (Sep–Oct)[^BDI-BI2-2], Main planting – Sorghum (Sep–Oct)[^BDI-BI2-2], Main planting – Land preparation (Oct–Jan)[^BDI-BI2-1], 2nd planting – Maize (Feb–Mar)[^BDI-BI2-2], 2nd planting – Sorghum (Feb–Mar)[^BDI-BI2-2], 2nd planting – Land preparation (Mar–May)[^BDI-BI2-1] and 3rd planting – Land preparation (Jun–Aug)[^BDI-BI2-1]. Harvests: the 3rd harvest (Sep–Nov)[^BDI-BI2-1], the main harvest (Dec–Feb)[^BDI-BI2-1], the main harvest – Maize (Jan–Feb)[^BDI-BI2-2], the main harvest – Sorghum (Jan–Feb)[^BDI-BI2-2], the 2nd harvest – Sorghum (Jun–Jul)[^BDI-BI2-2], the 2nd harvest (Jun–Aug)[^BDI-BI2-1] and the 2nd harvest – Maize (Jun–Jul)[^BDI-BI2-2]. The lean season runs from September to December[^BDI-BI2-1] and from February to May[^BDI-BI2-1]. Disease outbreaks follow a seasonal pattern: malaria (Oct–Dec)[^BDI-BI2-3] and malaria (Mar–May)[^BDI-BI2-3]."
+     ],
+     "indicative": "Pressure on households is likely to peak from September to December and from February to May, when the lean season coincides with malaria and the rainy season. No wet-season hazard, outbreak or lean season is recorded in January and from June to August, making this the likeliest window for field activities such as assessments, registration or construction.",
+     "sources_note": "The 20 records come from 3 sources dated 2013 to 2023. Entries more than 10 years old should be checked against current FEWS NET, FAO GIEWS or national meteorological calendars before use in planning.",
+     "units": [
+      {
+       "name": "Bukinanyana",
+       "pcode": "BI202",
+       "detail": "Buganda – Ruhagarika; Ndava – Ndava"
+      },
+      {
+       "name": "Mpanda",
+       "pcode": "BI205",
+       "detail": "Rugazi – Kibuye"
+      },
+      {
+       "name": "Muhuta",
+       "pcode": "BI208",
+       "detail": "Magara – Vuma"
+      },
+      {
+       "name": "Ntahangwa",
+       "pcode": "BI210",
+       "detail": "Rubirizi – Nyabunyegeri"
+      }
+     ],
+     "events": [
+      {
+       "section": "Seasonal hazard",
+       "label": "Rainy season",
+       "span": "Sep–Dec",
+       "bars": [
+        [
+         0,
+         2
+        ],
+        [
+         11,
+         11
+        ]
+       ]
+      },
+      {
+       "section": "Seasonal hazard",
+       "label": "Rainy season",
+       "span": "Feb–Apr",
+       "bars": [
+        [
+         4,
+         6
+        ]
+       ]
+      },
+      {
+       "section": "Planting and growing",
+       "label": "Main planting – Land preparation",
+       "span": "Oct–Jan",
+       "bars": [
+        [
+         0,
+         3
+        ]
+       ]
+      },
+      {
+       "section": "Planting and growing",
+       "label": "Main planting – Maize",
+       "span": "Sep–Oct",
+       "bars": [
+        [
+         0,
+         0
+        ],
+        [
+         11,
+         11
+        ]
+       ]
+      },
+      {
+       "section": "Planting and growing",
+       "label": "Main planting – Sorghum",
+       "span": "Sep–Oct",
+       "bars": [
+        [
+         0,
+         0
+        ],
+        [
+         11,
+         11
+        ]
+       ]
+      },
+      {
+       "section": "Planting and growing",
+       "label": "2nd planting – Maize",
+       "span": "Feb–Mar",
+       "bars": [
+        [
+         4,
+         5
+        ]
+       ]
+      },
+      {
+       "section": "Planting and growing",
+       "label": "2nd planting – Sorghum",
+       "span": "Feb–Mar",
+       "bars": [
+        [
+         4,
+         5
+        ]
+       ]
+      },
+      {
+       "section": "Planting and growing",
+       "label": "2nd planting – Land preparation",
+       "span": "Mar–May",
+       "bars": [
+        [
+         5,
+         7
+        ]
+       ]
+      },
+      {
+       "section": "Planting and growing",
+       "label": "3rd planting – Land preparation",
+       "span": "Jun–Aug",
+       "bars": [
+        [
+         8,
+         10
+        ]
+       ]
+      },
+      {
+       "section": "Harvest",
+       "label": "3rd harvest",
+       "span": "Sep–Nov",
+       "bars": [
+        [
+         0,
+         1
+        ],
+        [
+         11,
+         11
+        ]
+       ]
+      },
+      {
+       "section": "Harvest",
+       "label": "Main harvest",
+       "span": "Dec–Feb",
+       "bars": [
+        [
+         2,
+         4
+        ]
+       ]
+      },
+      {
+       "section": "Harvest",
+       "label": "Main harvest – Maize",
+       "span": "Jan–Feb",
+       "bars": [
+        [
+         3,
+         4
+        ]
+       ]
+      },
+      {
+       "section": "Harvest",
+       "label": "Main harvest – Sorghum",
+       "span": "Jan–Feb",
+       "bars": [
+        [
+         3,
+         4
+        ]
+       ]
+      },
+      {
+       "section": "Harvest",
+       "label": "2nd harvest",
+       "span": "Jun–Aug",
+       "bars": [
+        [
+         8,
+         10
+        ]
+       ]
+      },
+      {
+       "section": "Harvest",
+       "label": "2nd harvest – Maize",
+       "span": "Jun–Jul",
+       "bars": [
+        [
+         8,
+         9
+        ]
+       ]
+      },
+      {
+       "section": "Harvest",
+       "label": "2nd harvest – Sorghum",
+       "span": "Jun–Jul",
+       "bars": [
+        [
+         8,
+         9
+        ]
+       ]
+      },
+      {
+       "section": "Lean season",
+       "label": "Lean season",
+       "span": "Sep–Dec",
+       "bars": [
+        [
+         0,
+         2
+        ],
+        [
+         11,
+         11
+        ]
+       ]
+      },
+      {
+       "section": "Lean season",
+       "label": "Lean season",
+       "span": "Feb–May",
+       "bars": [
+        [
+         4,
+         7
+        ]
+       ]
+      },
+      {
+       "section": "Outbreak",
+       "label": "Malaria",
+       "span": "Oct–Dec",
+       "bars": [
+        [
+         0,
+         2
+        ]
+       ]
+      },
+      {
+       "section": "Outbreak",
+       "label": "Malaria",
+       "span": "Mar–May",
+       "bars": [
+        [
+         5,
+         7
+        ]
+       ]
+      }
+     ],
+     "footnotes": {
+      "BDI-BI2-1": {
+       "text": "FEWS NET (2013-12-18), via ACAPS Seasonal Events Calendar.",
+       "url": "https://fews.net/fr/east-africa/burundi"
+      },
+      "BDI-BI2-2": {
+       "text": "USDA (2023-02-08), via ACAPS Seasonal Events Calendar.",
+       "url": "https://ipad.fas.usda.gov/countrysummary/Default.aspx?id=BY"
+      },
+      "BDI-BI2-3": {
+       "text": "Severe Malaria Observatory (2023-04-13), via ACAPS Seasonal Events Calendar.",
+       "url": "https://www.severemalaria.org/fr/pays/burundi"
+      }
+     },
+     "name": "Bujumbura"
+    },
+    "BI3": {
+     "title": "Burunga (Burundi) – seasonal calendar (Oct 2026 – Sep 2027)",
+     "prose": [
+      "None of ACAPS's sub-national records fall within Burunga, so this calendar shows only the 20 country-wide events and matches the national pattern.",
+      "The recorded seasonal hazards are the rainy season (Sep–Dec)[^BDI-BI3-1] and the rainy season (Feb–Apr)[^BDI-BI3-1]. Planting and growing periods: Main planting – Maize (Sep–Oct)[^BDI-BI3-2], Main planting – Sorghum (Sep–Oct)[^BDI-BI3-2], Main planting – Land preparation (Oct–Jan)[^BDI-BI3-1], 2nd planting – Maize (Feb–Mar)[^BDI-BI3-2], 2nd planting – Sorghum (Feb–Mar)[^BDI-BI3-2], 2nd planting – Land preparation (Mar–May)[^BDI-BI3-1] and 3rd planting – Land preparation (Jun–Aug)[^BDI-BI3-1]. Harvests: the 3rd harvest (Sep–Nov)[^BDI-BI3-1], the main harvest (Dec–Feb)[^BDI-BI3-1], the main harvest – Maize (Jan–Feb)[^BDI-BI3-2], the main harvest – Sorghum (Jan–Feb)[^BDI-BI3-2], the 2nd harvest – Sorghum (Jun–Jul)[^BDI-BI3-2], the 2nd harvest (Jun–Aug)[^BDI-BI3-1] and the 2nd harvest – Maize (Jun–Jul)[^BDI-BI3-2]. The lean season runs from September to December[^BDI-BI3-1] and from February to May[^BDI-BI3-1]. Disease outbreaks follow a seasonal pattern: malaria (Oct–Dec)[^BDI-BI3-3] and malaria (Mar–May)[^BDI-BI3-3]."
+     ],
+     "indicative": "Pressure on households is likely to peak from September to December and from February to May, when the lean season coincides with malaria and the rainy season. No wet-season hazard, outbreak or lean season is recorded in January and from June to August, making this the likeliest window for field activities such as assessments, registration or construction.",
+     "sources_note": "The 20 records come from 3 sources dated 2013 to 2023. Entries more than 10 years old should be checked against current FEWS NET, FAO GIEWS or national meteorological calendars before use in planning.",
+     "units": [
+      {
+       "name": "Makamba",
+       "pcode": "BI302",
+       "detail": "Kayogoro – Quartier Swahili"
+      },
+      {
+       "name": "Nyanza",
+       "pcode": "BI305",
+       "detail": "Mukungu – Mukungu; Nyanza – Mvugo"
+      },
+      {
+       "name": "Rumonge",
+       "pcode": "BI306",
+       "detail": "Gatete – Mutambara; Rumonge – Quartier Kanyenkoko"
+      }
+     ],
+     "events": [
+      {
+       "section": "Seasonal hazard",
+       "label": "Rainy season",
+       "span": "Sep–Dec",
+       "bars": [
+        [
+         0,
+         2
+        ],
+        [
+         11,
+         11
+        ]
+       ]
+      },
+      {
+       "section": "Seasonal hazard",
+       "label": "Rainy season",
+       "span": "Feb–Apr",
+       "bars": [
+        [
+         4,
+         6
+        ]
+       ]
+      },
+      {
+       "section": "Planting and growing",
+       "label": "Main planting – Land preparation",
+       "span": "Oct–Jan",
+       "bars": [
+        [
+         0,
+         3
+        ]
+       ]
+      },
+      {
+       "section": "Planting and growing",
+       "label": "Main planting – Maize",
+       "span": "Sep–Oct",
+       "bars": [
+        [
+         0,
+         0
+        ],
+        [
+         11,
+         11
+        ]
+       ]
+      },
+      {
+       "section": "Planting and growing",
+       "label": "Main planting – Sorghum",
+       "span": "Sep–Oct",
+       "bars": [
+        [
+         0,
+         0
+        ],
+        [
+         11,
+         11
+        ]
+       ]
+      },
+      {
+       "section": "Planting and growing",
+       "label": "2nd planting – Maize",
+       "span": "Feb–Mar",
+       "bars": [
+        [
+         4,
+         5
+        ]
+       ]
+      },
+      {
+       "section": "Planting and growing",
+       "label": "2nd planting – Sorghum",
+       "span": "Feb–Mar",
+       "bars": [
+        [
+         4,
+         5
+        ]
+       ]
+      },
+      {
+       "section": "Planting and growing",
+       "label": "2nd planting – Land preparation",
+       "span": "Mar–May",
+       "bars": [
+        [
+         5,
+         7
+        ]
+       ]
+      },
+      {
+       "section": "Planting and growing",
+       "label": "3rd planting – Land preparation",
+       "span": "Jun–Aug",
+       "bars": [
+        [
+         8,
+         10
+        ]
+       ]
+      },
+      {
+       "section": "Harvest",
+       "label": "3rd harvest",
+       "span": "Sep–Nov",
+       "bars": [
+        [
+         0,
+         1
+        ],
+        [
+         11,
+         11
+        ]
+       ]
+      },
+      {
+       "section": "Harvest",
+       "label": "Main harvest",
+       "span": "Dec–Feb",
+       "bars": [
+        [
+         2,
+         4
+        ]
+       ]
+      },
+      {
+       "section": "Harvest",
+       "label": "Main harvest – Maize",
+       "span": "Jan–Feb",
+       "bars": [
+        [
+         3,
+         4
+        ]
+       ]
+      },
+      {
+       "section": "Harvest",
+       "label": "Main harvest – Sorghum",
+       "span": "Jan–Feb",
+       "bars": [
+        [
+         3,
+         4
+        ]
+       ]
+      },
+      {
+       "section": "Harvest",
+       "label": "2nd harvest",
+       "span": "Jun–Aug",
+       "bars": [
+        [
+         8,
+         10
+        ]
+       ]
+      },
+      {
+       "section": "Harvest",
+       "label": "2nd harvest – Maize",
+       "span": "Jun–Jul",
+       "bars": [
+        [
+         8,
+         9
+        ]
+       ]
+      },
+      {
+       "section": "Harvest",
+       "label": "2nd harvest – Sorghum",
+       "span": "Jun–Jul",
+       "bars": [
+        [
+         8,
+         9
+        ]
+       ]
+      },
+      {
+       "section": "Lean season",
+       "label": "Lean season",
+       "span": "Sep–Dec",
+       "bars": [
+        [
+         0,
+         2
+        ],
+        [
+         11,
+         11
+        ]
+       ]
+      },
+      {
+       "section": "Lean season",
+       "label": "Lean season",
+       "span": "Feb–May",
+       "bars": [
+        [
+         4,
+         7
+        ]
+       ]
+      },
+      {
+       "section": "Outbreak",
+       "label": "Malaria",
+       "span": "Oct–Dec",
+       "bars": [
+        [
+         0,
+         2
+        ]
+       ]
+      },
+      {
+       "section": "Outbreak",
+       "label": "Malaria",
+       "span": "Mar–May",
+       "bars": [
+        [
+         5,
+         7
+        ]
+       ]
+      }
+     ],
+     "footnotes": {
+      "BDI-BI3-1": {
+       "text": "FEWS NET (2013-12-18), via ACAPS Seasonal Events Calendar.",
+       "url": "https://fews.net/fr/east-africa/burundi"
+      },
+      "BDI-BI3-2": {
+       "text": "USDA (2023-02-08), via ACAPS Seasonal Events Calendar.",
+       "url": "https://ipad.fas.usda.gov/countrysummary/Default.aspx?id=BY"
+      },
+      "BDI-BI3-3": {
+       "text": "Severe Malaria Observatory (2023-04-13), via ACAPS Seasonal Events Calendar.",
+       "url": "https://www.severemalaria.org/fr/pays/burundi"
+      }
+     },
+     "name": "Burunga"
+    }
+   },
+   "note": null
+  },
+  "Democratic Republic of the Congo": {
+   "national": {
+    "title": "Democratic Republic of the Congo – national seasonal calendar (Oct 2026 – Sep 2027)",
+    "prose": [
+     "ACAPS lists 35 seasonal events for Democratic Republic of the Congo, 35 of them limited to specific admin-1 areas (shown in brackets).",
+     "The recorded seasonal hazards are the rainy season in Nord-Kivu, Ituri (Sep–Dec)[^COD-1], the rainy season in Sud-Kivu, Maniema (Sep–Jan)[^COD-1], the rainy season in Haut-Katanga, Lualaba, Tanganyika (Sep–Dec)[^COD-1], the rainy season in Haut-Katanga, Lualaba, Tanganyika (Jan–Apr)[^COD-1], the rainy season in Nord-Kivu, Ituri (Mar–Jun)[^COD-1] and the rainy season in Sud-Kivu, Maniema (Apr–Jun)[^COD-1]. Planting and growing periods: Main planting – Maize in Maniema, Sankuru (Jul–Oct)[^COD-2], Main planting – Maize in Lualaba, Haut-Lomami, Haut-Katanga, Lomami (Sep–Oct)[^COD-2], 2nd planting – Maize in Maniema, Sankuru (Nov–Jan)[^COD-2], Main planting – Maize in Lualaba, Haut-Lomami, Haut-Katanga (Nov–Dec)[^COD-2], Main planting – Rice in Lualaba, Haut-Lomami, Haut-Katanga, Lomami (Dec–Jan)[^COD-2], 2nd planting – Maize in Lualaba, Haut-Lomami, Haut-Katanga, Lomami (Jan–Feb)[^COD-2], 2nd planting – Maize in Bas-Uélé, Tshopo, Haut-Uélé (Feb–Mar)[^COD-2], Main planting – Maize in Bas-Uélé, Tshopo, Haut-Uélé (Jun–Jul)[^COD-2] and Main planting – Rice in Bas-Uélé, Tshopo, Haut-Uélé (Jul–Aug)[^COD-2]. Harvests: the main harvest – Maize in Bas-Uélé, Tshopo, Haut-Uélé (Oct–Nov)[^COD-2], the main harvest – Cassava in Nord-Kivu, Ituri (year-round)[^COD-1], the main harvest – Cassava in Sud-Kivu, Maniema (year-round)[^COD-1], the main harvest – Cassava in Haut-Katanga, Lualaba, Tanganyika (year-round)[^COD-1], the main harvest – Maize in Maniema, Sankuru (Nov–Jan)[^COD-2], the main harvest – Rice in Bas-Uélé, Tshopo, Haut-Uélé (Nov)[^COD-2], the main harvest – Maize in Lualaba, Haut-Lomami, Haut-Katanga, Lomami (Jan–Feb)[^COD-2], the main harvest – Maize/Beans/Groundnuts /Rice in Nord-Kivu, Ituri (Jan–Feb)[^COD-1], the main harvest – Maize/Groundnuts /Beans/Rice in Sud-Kivu, Maniema (Jan–Feb)[^COD-1], the 2nd harvest – Maize in Maniema, Sankuru (Mar–May)[^COD-2], the main harvest – Maize in Lualaba, Haut-Lomami, Haut-Katanga (Mar–May)[^COD-2], the main harvest in Haut-Katanga, Lualaba, Tanganyika (Mar–Jun)[^COD-1], the 2nd harvest – Maize in Lualaba, Haut-Lomami, Haut-Katanga, Lomami (May–Jun)[^COD-2], the main harvest – Rice in Lualaba, Haut-Lomami, Haut-Katanga, Lomami (May)[^COD-2], the 2nd harvest – Maize in Bas-Uélé, Tshopo, Haut-Uélé (Jun–Jul)[^COD-2], the 2nd harvest – Maize/Beans/Groundnuts  in Nord-Kivu, Ituri (Jun–Jul)[^COD-1] and the 2nd harvest – Maize/Groundnuts /Beans in Sud-Kivu, Maniema (Jul–Aug)[^COD-1]. The lean season runs from October to November[^COD-1] in Nord-Kivu, Ituri, from October to December[^COD-1] in Sud-Kivu, Maniema and from January to April[^COD-1] in Haut-Katanga, Lualaba, Tanganyika."
+    ],
+    "indicative": "Pressure on households is likely to peak from October to April, when the lean season coincides with the rainy season. No wet-season hazard, outbreak or lean season is recorded from July to August, making this the likeliest window for field activities such as assessments, registration or construction.",
+    "sources_note": "The 35 records come from 2 sources dated 2016 to 2023.",
+    "units": [],
+    "events": [
+     {
+      "section": "Seasonal hazard",
+      "label": "Rainy season (Nord-Kivu/Ituri)",
+      "span": "Sep–Dec",
+      "bars": [
+       [
+        0,
+        2
+       ],
+       [
+        11,
+        11
+       ]
+      ]
+     },
+     {
+      "section": "Seasonal hazard",
+      "label": "Rainy season (Sud-Kivu/Maniema)",
+      "span": "Sep–Jan",
+      "bars": [
+       [
+        0,
+        3
+       ],
+       [
+        11,
+        11
+       ]
+      ]
+     },
+     {
+      "section": "Seasonal hazard",
+      "label": "Rainy season (Haut-Katanga/Lualaba/Tanganyika)",
+      "span": "Sep–Dec",
+      "bars": [
+       [
+        0,
+        2
+       ],
+       [
+        11,
+        11
+       ]
+      ]
+     },
+     {
+      "section": "Seasonal hazard",
+      "label": "Rainy season (Haut-Katanga/Lualaba/Tanganyika)",
+      "span": "Jan–Apr",
+      "bars": [
+       [
+        3,
+        6
+       ]
+      ]
+     },
+     {
+      "section": "Seasonal hazard",
+      "label": "Rainy season (Nord-Kivu/Ituri)",
+      "span": "Mar–Jun",
+      "bars": [
+       [
+        5,
+        8
+       ]
+      ]
+     },
+     {
+      "section": "Seasonal hazard",
+      "label": "Rainy season (Sud-Kivu/Maniema)",
+      "span": "Apr–Jun",
+      "bars": [
+       [
+        6,
+        8
+       ]
+      ]
+     },
+     {
+      "section": "Planting and growing",
+      "label": "Main planting – Maize (Maniema/Sankuru)",
+      "span": "Jul–Oct",
+      "bars": [
+       [
+        0,
+        0
+       ],
+       [
+        9,
+        11
+       ]
+      ]
+     },
+     {
+      "section": "Planting and growing",
+      "label": "Main planting – Maize (Lualaba/Haut-Lomami +2)",
+      "span": "Sep–Oct",
+      "bars": [
+       [
+        0,
+        0
+       ],
+       [
+        11,
+        11
+       ]
+      ]
+     },
+     {
+      "section": "Planting and growing",
+      "label": "2nd planting – Maize (Maniema/Sankuru)",
+      "span": "Nov–Jan",
+      "bars": [
+       [
+        1,
+        3
+       ]
+      ]
+     },
+     {
+      "section": "Planting and growing",
+      "label": "Main planting – Maize (Lualaba/Haut-Lomami/Haut-Katanga)",
+      "span": "Nov–Dec",
+      "bars": [
+       [
+        1,
+        2
+       ]
+      ]
+     },
+     {
+      "section": "Planting and growing",
+      "label": "Main planting – Rice (Lualaba/Haut-Lomami +2)",
+      "span": "Dec–Jan",
+      "bars": [
+       [
+        2,
+        3
+       ]
+      ]
+     },
+     {
+      "section": "Planting and growing",
+      "label": "2nd planting – Maize (Lualaba/Haut-Lomami +2)",
+      "span": "Jan–Feb",
+      "bars": [
+       [
+        3,
+        4
+       ]
+      ]
+     },
+     {
+      "section": "Planting and growing",
+      "label": "2nd planting – Maize (Bas-Uélé/Tshopo/Haut-Uélé)",
+      "span": "Feb–Mar",
+      "bars": [
+       [
+        4,
+        5
+       ]
+      ]
+     },
+     {
+      "section": "Planting and growing",
+      "label": "Main planting – Maize (Bas-Uélé/Tshopo/Haut-Uélé)",
+      "span": "Jun–Jul",
+      "bars": [
+       [
+        8,
+        9
+       ]
+      ]
+     },
+     {
+      "section": "Planting and growing",
+      "label": "Main planting – Rice (Bas-Uélé/Tshopo/Haut-Uélé)",
+      "span": "Jul–Aug",
+      "bars": [
+       [
+        9,
+        10
+       ]
+      ]
+     },
+     {
+      "section": "Harvest",
+      "label": "Main harvest – Cassava (Nord-Kivu/Ituri)",
+      "span": "year-round",
+      "bars": [
+       [
+        0,
+        11
+       ]
+      ]
+     },
+     {
+      "section": "Harvest",
+      "label": "Main harvest – Cassava (Sud-Kivu/Maniema)",
+      "span": "year-round",
+      "bars": [
+       [
+        0,
+        11
+       ]
+      ]
+     },
+     {
+      "section": "Harvest",
+      "label": "Main harvest – Cassava (Haut-Katanga/Lualaba/Tanganyika)",
+      "span": "year-round",
+      "bars": [
+       [
+        0,
+        11
+       ]
+      ]
+     },
+     {
+      "section": "Harvest",
+      "label": "Main harvest – Maize (Bas-Uélé/Tshopo/Haut-Uélé)",
+      "span": "Oct–Nov",
+      "bars": [
+       [
+        0,
+        1
+       ]
+      ]
+     },
+     {
+      "section": "Harvest",
+      "label": "Main harvest – Maize (Maniema/Sankuru)",
+      "span": "Nov–Jan",
+      "bars": [
+       [
+        1,
+        3
+       ]
+      ]
+     },
+     {
+      "section": "Harvest",
+      "label": "Main harvest – Rice (Bas-Uélé/Tshopo/Haut-Uélé)",
+      "span": "Nov",
+      "bars": [
+       [
+        1,
+        1
+       ]
+      ]
+     },
+     {
+      "section": "Harvest",
+      "label": "Main harvest – Maize (Lualaba/Haut-Lomami +2)",
+      "span": "Jan–Feb",
+      "bars": [
+       [
+        3,
+        4
+       ]
+      ]
+     },
+     {
+      "section": "Harvest",
+      "label": "Main harvest – Maize/Beans/Groundnuts /Rice (Nord-Kivu/Ituri)",
+      "span": "Jan–Feb",
+      "bars": [
+       [
+        3,
+        4
+       ]
+      ]
+     },
+     {
+      "section": "Harvest",
+      "label": "Main harvest – Maize/Groundnuts /Beans/Rice (Sud-Kivu/Maniema)",
+      "span": "Jan–Feb",
+      "bars": [
+       [
+        3,
+        4
+       ]
+      ]
+     },
+     {
+      "section": "Harvest",
+      "label": "2nd harvest – Maize (Maniema/Sankuru)",
+      "span": "Mar–May",
+      "bars": [
+       [
+        5,
+        7
+       ]
+      ]
+     },
+     {
+      "section": "Harvest",
+      "label": "Main harvest (Haut-Katanga/Lualaba/Tanganyika)",
+      "span": "Mar–Jun",
+      "bars": [
+       [
+        5,
+        8
+       ]
+      ]
+     },
+     {
+      "section": "Harvest",
+      "label": "Main harvest – Maize (Lualaba/Haut-Lomami/Haut-Katanga)",
+      "span": "Mar–May",
+      "bars": [
+       [
+        5,
+        7
+       ]
+      ]
+     },
+     {
+      "section": "Harvest",
+      "label": "2nd harvest – Maize (Lualaba/Haut-Lomami +2)",
+      "span": "May–Jun",
+      "bars": [
+       [
+        7,
+        8
+       ]
+      ]
+     },
+     {
+      "section": "Harvest",
+      "label": "Main harvest – Rice (Lualaba/Haut-Lomami +2)",
+      "span": "May",
+      "bars": [
+       [
+        7,
+        7
+       ]
+      ]
+     },
+     {
+      "section": "Harvest",
+      "label": "2nd harvest – Maize (Bas-Uélé/Tshopo/Haut-Uélé)",
+      "span": "Jun–Jul",
+      "bars": [
+       [
+        8,
+        9
+       ]
+      ]
+     },
+     {
+      "section": "Harvest",
+      "label": "2nd harvest – Maize/Beans/Groundnuts (Nord-Kivu/Ituri)",
+      "span": "Jun–Jul",
+      "bars": [
+       [
+        8,
+        9
+       ]
+      ]
+     },
+     {
+      "section": "Harvest",
+      "label": "2nd harvest – Maize/Groundnuts /Beans (Sud-Kivu/Maniema)",
+      "span": "Jul–Aug",
+      "bars": [
+       [
+        9,
+        10
+       ]
+      ]
+     },
+     {
+      "section": "Lean season",
+      "label": "Lean season (Nord-Kivu/Ituri)",
+      "span": "Oct–Nov",
+      "bars": [
+       [
+        0,
+        1
+       ]
+      ]
+     },
+     {
+      "section": "Lean season",
+      "label": "Lean season (Sud-Kivu/Maniema)",
+      "span": "Oct–Dec",
+      "bars": [
+       [
+        0,
+        2
+       ]
+      ]
+     },
+     {
+      "section": "Lean season",
+      "label": "Lean season (Haut-Katanga/Lualaba/Tanganyika)",
+      "span": "Jan–Apr",
+      "bars": [
+       [
+        3,
+        6
+       ]
+      ]
+     }
+    ],
+    "footnotes": {
+     "COD-1": {
+      "text": "FEWS NET (2016-12-01), via ACAPS Seasonal Events Calendar.",
+      "url": "https://fews.net/southern-africa/democratic-republic-congo/food-security-outlook/december-2016"
+     },
+     "COD-2": {
+      "text": "USDA (2023-02-08), via ACAPS Seasonal Events Calendar.",
+      "url": "https://ipad.fas.usda.gov/countrysummary/Default.aspx?id=CG"
+     }
+    }
+   },
+   "areas": {},
+   "note": null
+  },
+  "Tanzania": {
+   "national": {
+    "title": "Tanzania – national seasonal calendar (Oct 2026 – Sep 2027)",
+    "prose": [
+     "ACAPS lists 14 seasonal events for Tanzania, 14 of them limited to specific admin-1 areas (shown in brackets).",
+     "The recorded seasonal hazards are the rainy season in Arusha, Dar es Salaam +8 (Sep–Dec)[^TZA-1], the rainy season in Tabora, Rukwa +12 (Nov–Jan)[^TZA-1], the rainy season in Tabora, Rukwa +12 (Feb–Apr)[^TZA-1] and the rainy season in Arusha, Dar es Salaam +8 (Mar–May)[^TZA-1]. Planting and growing periods: Main planting in Arusha, Dar es Salaam +8 (Sep–Oct)[^TZA-1], Main planting – Land preparation in Tabora, Rukwa +12 (Oct–Dec)[^TZA-1] and 2nd planting in Arusha, Dar es Salaam +8 (Feb–Mar)[^TZA-1]. Harvests: the main harvest – Banana/Cassava in Tabora, Rukwa +12 (year-round)[^TZA-1], the main harvest in Arusha, Dar es Salaam +8 (Jan–Feb)[^TZA-1], the green harvest in Tabora, Rukwa +12 (Mar–Apr)[^TZA-1], the main harvest in Tabora, Rukwa +12 (May–Jul)[^TZA-1] and the 2nd harvest in Arusha, Dar es Salaam +8 (Jul–Aug)[^TZA-1]. The lean season runs from October to December[^TZA-1] in Arusha, Dar es Salaam +8 and from November to February[^TZA-1] in Tabora, Rukwa +12."
+    ],
+    "indicative": "Pressure on households is likely to peak from October to February, when the lean season coincides with the rainy season. No wet-season hazard, outbreak or lean season is recorded from June to August, making this the likeliest window for field activities such as assessments, registration or construction.",
+    "sources_note": "The 14 records come from 1 source dated 2017.",
+    "units": [],
+    "events": [
+     {
+      "section": "Seasonal hazard",
+      "label": "Rainy season (Arusha/Dar es Salaam +8)",
+      "span": "Sep–Dec",
+      "bars": [
+       [
+        0,
+        2
+       ],
+       [
+        11,
+        11
+       ]
+      ]
+     },
+     {
+      "section": "Seasonal hazard",
+      "label": "Rainy season (Tabora/Rukwa +12)",
+      "span": "Nov–Jan",
+      "bars": [
+       [
+        1,
+        3
+       ]
+      ]
+     },
+     {
+      "section": "Seasonal hazard",
+      "label": "Rainy season (Tabora/Rukwa +12)",
+      "span": "Feb–Apr",
+      "bars": [
+       [
+        4,
+        6
+       ]
+      ]
+     },
+     {
+      "section": "Seasonal hazard",
+      "label": "Rainy season (Arusha/Dar es Salaam +8)",
+      "span": "Mar–May",
+      "bars": [
+       [
+        5,
+        7
+       ]
+      ]
+     },
+     {
+      "section": "Planting and growing",
+      "label": "Main planting (Arusha/Dar es Salaam +8)",
+      "span": "Sep–Oct",
+      "bars": [
+       [
+        0,
+        0
+       ],
+       [
+        11,
+        11
+       ]
+      ]
+     },
+     {
+      "section": "Planting and growing",
+      "label": "Main planting – Land preparation (Tabora/Rukwa +12)",
+      "span": "Oct–Dec",
+      "bars": [
+       [
+        0,
+        2
+       ]
+      ]
+     },
+     {
+      "section": "Planting and growing",
+      "label": "2nd planting (Arusha/Dar es Salaam +8)",
+      "span": "Feb–Mar",
+      "bars": [
+       [
+        4,
+        5
+       ]
+      ]
+     },
+     {
+      "section": "Harvest",
+      "label": "Main harvest – Banana/Cassava (Tabora/Rukwa +12)",
+      "span": "year-round",
+      "bars": [
+       [
+        0,
+        11
+       ]
+      ]
+     },
+     {
+      "section": "Harvest",
+      "label": "Main harvest (Arusha/Dar es Salaam +8)",
+      "span": "Jan–Feb",
+      "bars": [
+       [
+        3,
+        4
+       ]
+      ]
+     },
+     {
+      "section": "Harvest",
+      "label": "Green harvest (Tabora/Rukwa +12)",
+      "span": "Mar–Apr",
+      "bars": [
+       [
+        5,
+        6
+       ]
+      ]
+     },
+     {
+      "section": "Harvest",
+      "label": "Main harvest (Tabora/Rukwa +12)",
+      "span": "May–Jul",
+      "bars": [
+       [
+        7,
+        9
+       ]
+      ]
+     },
+     {
+      "section": "Harvest",
+      "label": "2nd harvest (Arusha/Dar es Salaam +8)",
+      "span": "Jul–Aug",
+      "bars": [
+       [
+        9,
+        10
+       ]
+      ]
+     },
+     {
+      "section": "Lean season",
+      "label": "Lean season (Arusha/Dar es Salaam +8)",
+      "span": "Oct–Dec",
+      "bars": [
+       [
+        0,
+        2
+       ]
+      ]
+     },
+     {
+      "section": "Lean season",
+      "label": "Lean season (Tabora/Rukwa +12)",
+      "span": "Nov–Feb",
+      "bars": [
+       [
+        1,
+        4
+       ]
+      ]
+     }
+    ],
+    "footnotes": {
+     "TZA-1": {
+      "text": "FEWS NET (2017-10-01), via ACAPS Seasonal Events Calendar.",
+      "url": "https://fews.net/east-africa/tanzania"
+     }
+    }
+   },
+   "areas": {
+    "TZ16": {
+     "title": "Kigoma (Tanzania) – seasonal calendar (Oct 2026 – Sep 2027)",
+     "prose": [
+      "This calendar combines 0 country-wide events with 14 recorded specifically for Kagera and Kigoma, which ACAPS geocodes to GADM admin-1 units that cover this action area.",
+      "The recorded seasonal hazards are the rainy season in Arusha, Dar es Salaam +8 (Sep–Dec)[^TZA-TZ16-1], the rainy season in Tabora, Rukwa +12 (Nov–Jan)[^TZA-TZ16-1], the rainy season in Tabora, Rukwa +12 (Feb–Apr)[^TZA-TZ16-1] and the rainy season in Arusha, Dar es Salaam +8 (Mar–May)[^TZA-TZ16-1]. Planting and growing periods: Main planting in Arusha, Dar es Salaam +8 (Sep–Oct)[^TZA-TZ16-1], Main planting – Land preparation in Tabora, Rukwa +12 (Oct–Dec)[^TZA-TZ16-1] and 2nd planting in Arusha, Dar es Salaam +8 (Feb–Mar)[^TZA-TZ16-1]. Harvests: the main harvest – Banana/Cassava in Tabora, Rukwa +12 (year-round)[^TZA-TZ16-1], the main harvest in Arusha, Dar es Salaam +8 (Jan–Feb)[^TZA-TZ16-1], the green harvest in Tabora, Rukwa +12 (Mar–Apr)[^TZA-TZ16-1], the main harvest in Tabora, Rukwa +12 (May–Jul)[^TZA-TZ16-1] and the 2nd harvest in Arusha, Dar es Salaam +8 (Jul–Aug)[^TZA-TZ16-1]. The lean season runs from October to December[^TZA-TZ16-1] in Arusha, Dar es Salaam +8 and from November to February[^TZA-TZ16-1] in Tabora, Rukwa +12."
+     ],
+     "indicative": "Pressure on households is likely to peak from October to February, when the lean season coincides with the rainy season. No wet-season hazard, outbreak or lean season is recorded from June to August, making this the likeliest window for field activities such as assessments, registration or construction.",
+     "sources_note": "The 14 records come from 1 source dated 2017.",
+     "units": [
+      {
+       "name": "Kigoma District Council",
+       "pcode": "TZ160311",
+       "detail": "Kagunga *(first priority)*; Mkigo *(first priority)*; Mwamgongo *(secondary)*; Mwandiga *(secondary)*; Simbo *(secondary)*"
+      },
+      {
+       "name": "Kigoma Ujiji Municipal Council",
+       "pcode": "TZ160323",
+       "detail": "Kagera *(secondary)*; Katubuka *(first priority)*; Kibirizi *(first priority)*; Kitongoni *(secondary)*"
+      },
+      {
+       "name": "Uvinza District Council",
+       "pcode": "TZ160411",
+       "detail": "Herembe *(first priority)*; Igalula *(secondary)*; Ilagala *(first priority)*; Itebula *(secondary)*; Nguruka *(secondary)*"
+      }
+     ],
+     "events": [
+      {
+       "section": "Seasonal hazard",
+       "label": "Rainy season (Arusha/Dar es Salaam +8)",
+       "span": "Sep–Dec",
+       "bars": [
+        [
+         0,
+         2
+        ],
+        [
+         11,
+         11
+        ]
+       ]
+      },
+      {
+       "section": "Seasonal hazard",
+       "label": "Rainy season (Tabora/Rukwa +12)",
+       "span": "Nov–Jan",
+       "bars": [
+        [
+         1,
+         3
+        ]
+       ]
+      },
+      {
+       "section": "Seasonal hazard",
+       "label": "Rainy season (Tabora/Rukwa +12)",
+       "span": "Feb–Apr",
+       "bars": [
+        [
+         4,
+         6
+        ]
+       ]
+      },
+      {
+       "section": "Seasonal hazard",
+       "label": "Rainy season (Arusha/Dar es Salaam +8)",
+       "span": "Mar–May",
+       "bars": [
+        [
+         5,
+         7
+        ]
+       ]
+      },
+      {
+       "section": "Planting and growing",
+       "label": "Main planting (Arusha/Dar es Salaam +8)",
+       "span": "Sep–Oct",
+       "bars": [
+        [
+         0,
+         0
+        ],
+        [
+         11,
+         11
+        ]
+       ]
+      },
+      {
+       "section": "Planting and growing",
+       "label": "Main planting – Land preparation (Tabora/Rukwa +12)",
+       "span": "Oct–Dec",
+       "bars": [
+        [
+         0,
+         2
+        ]
+       ]
+      },
+      {
+       "section": "Planting and growing",
+       "label": "2nd planting (Arusha/Dar es Salaam +8)",
+       "span": "Feb–Mar",
+       "bars": [
+        [
+         4,
+         5
+        ]
+       ]
+      },
+      {
+       "section": "Harvest",
+       "label": "Main harvest – Banana/Cassava (Tabora/Rukwa +12)",
+       "span": "year-round",
+       "bars": [
+        [
+         0,
+         11
+        ]
+       ]
+      },
+      {
+       "section": "Harvest",
+       "label": "Main harvest (Arusha/Dar es Salaam +8)",
+       "span": "Jan–Feb",
+       "bars": [
+        [
+         3,
+         4
+        ]
+       ]
+      },
+      {
+       "section": "Harvest",
+       "label": "Green harvest (Tabora/Rukwa +12)",
+       "span": "Mar–Apr",
+       "bars": [
+        [
+         5,
+         6
+        ]
+       ]
+      },
+      {
+       "section": "Harvest",
+       "label": "Main harvest (Tabora/Rukwa +12)",
+       "span": "May–Jul",
+       "bars": [
+        [
+         7,
+         9
+        ]
+       ]
+      },
+      {
+       "section": "Harvest",
+       "label": "2nd harvest (Arusha/Dar es Salaam +8)",
+       "span": "Jul–Aug",
+       "bars": [
+        [
+         9,
+         10
+        ]
+       ]
+      },
+      {
+       "section": "Lean season",
+       "label": "Lean season (Arusha/Dar es Salaam +8)",
+       "span": "Oct–Dec",
+       "bars": [
+        [
+         0,
+         2
+        ]
+       ]
+      },
+      {
+       "section": "Lean season",
+       "label": "Lean season (Tabora/Rukwa +12)",
+       "span": "Nov–Feb",
+       "bars": [
+        [
+         1,
+         4
+        ]
+       ]
+      }
+     ],
+     "footnotes": {
+      "TZA-TZ16-1": {
+       "text": "FEWS NET (2017-10-01), via ACAPS Seasonal Events Calendar.",
+       "url": "https://fews.net/east-africa/tanzania"
+      }
+     },
+     "name": "Kigoma"
+    }
+   },
+   "note": null
+  },
+  "Madagascar": {
+   "national": {
+    "title": "Madagascar – national seasonal calendar (Oct 2026 – Sep 2027)",
+    "prose": [
+     "ACAPS lists 19 seasonal events for Madagascar, 9 of them limited to specific admin-1 areas (shown in brackets).",
+     "The recorded seasonal hazards are the cyclone season (Nov–Feb)[^MDG-1] and the rainy season (Nov–Apr)[^MDG-1]. Planting and growing periods: Main planting – Cereal /Legumes in Fianarantsoa, Toliary (Oct–Jan)[^MDG-1], Main planting – Maize (Nov–Dec)[^MDG-2], Main planting – Rice (Nov–Jan)[^MDG-2], Main planting – Sorghum (Dec)[^MDG-2], Main planting – Rice in Antananarivo, Antsiranana, Mahajanga, Toamasina (Dec–Feb)[^MDG-1], Main planting – Wheat (May)[^MDG-2] and 2nd planting – Rice in Antsiranana, Mahajanga, Toamasina, Antananarivo (Jul–Sep)[^MDG-1]. Harvests: the main harvest – Cassava in Fianarantsoa, Toliary (Aug–Oct)[^MDG-1], the main harvest – Wheat (Nov)[^MDG-2], the 2nd harvest – Rice in Antsiranana, Mahajanga, Toamasina, Antananarivo (Dec–Feb)[^MDG-1], the main harvest – Maize (Mar–Apr)[^MDG-2], the main harvest – Cereal /Legumes in Fianarantsoa, Toliary (Mar–May)[^MDG-1], the main harvest – Rice (Apr–Jun)[^MDG-2], the main harvest – Rice in Antsiranana, Mahajanga, Toamasina, Antananarivo (Apr–Jun)[^MDG-1] and the main harvest – Sorghum (May)[^MDG-2]. The lean season runs from December to February[^MDG-1] in Fianarantsoa, Toliary and from March to April[^MDG-1] in Antsiranana, Mahajanga, Toamasina, Antananarivo."
+    ],
+    "indicative": "Pressure on households is likely to peak from December to April, when the lean season coincides with the cyclone season and the rainy season. No wet-season hazard, outbreak or lean season is recorded from May to October, making this the likeliest window for field activities such as assessments, registration or construction.",
+    "sources_note": "The 19 records come from 2 sources dated 2016 to 2023.",
+    "units": [],
+    "events": [
+     {
+      "section": "Seasonal hazard",
+      "label": "Cyclone season",
+      "span": "Nov–Feb",
+      "bars": [
+       [
+        1,
+        4
+       ]
+      ]
+     },
+     {
+      "section": "Seasonal hazard",
+      "label": "Rainy season",
+      "span": "Nov–Apr",
+      "bars": [
+       [
+        1,
+        6
+       ]
+      ]
+     },
+     {
+      "section": "Planting and growing",
+      "label": "Main planting – Cereal /Legumes (Fianarantsoa/Toliary)",
+      "span": "Oct–Jan",
+      "bars": [
+       [
+        0,
+        3
+       ]
+      ]
+     },
+     {
+      "section": "Planting and growing",
+      "label": "Main planting – Maize",
+      "span": "Nov–Dec",
+      "bars": [
+       [
+        1,
+        2
+       ]
+      ]
+     },
+     {
+      "section": "Planting and growing",
+      "label": "Main planting – Rice",
+      "span": "Nov–Jan",
+      "bars": [
+       [
+        1,
+        3
+       ]
+      ]
+     },
+     {
+      "section": "Planting and growing",
+      "label": "Main planting – Rice (Antananarivo/Antsiranana +2)",
+      "span": "Dec–Feb",
+      "bars": [
+       [
+        2,
+        4
+       ]
+      ]
+     },
+     {
+      "section": "Planting and growing",
+      "label": "Main planting – Sorghum",
+      "span": "Dec",
+      "bars": [
+       [
+        2,
+        2
+       ]
+      ]
+     },
+     {
+      "section": "Planting and growing",
+      "label": "Main planting – Wheat",
+      "span": "May",
+      "bars": [
+       [
+        7,
+        7
+       ]
+      ]
+     },
+     {
+      "section": "Planting and growing",
+      "label": "2nd planting – Rice (Antsiranana/Mahajanga +2)",
+      "span": "Jul–Sep",
+      "bars": [
+       [
+        9,
+        11
+       ]
+      ]
+     },
+     {
+      "section": "Harvest",
+      "label": "Main harvest – Cassava (Fianarantsoa/Toliary)",
+      "span": "Aug–Oct",
+      "bars": [
+       [
+        0,
+        0
+       ],
+       [
+        10,
+        11
+       ]
+      ]
+     },
+     {
+      "section": "Harvest",
+      "label": "Main harvest – Wheat",
+      "span": "Nov",
+      "bars": [
+       [
+        1,
+        1
+       ]
+      ]
+     },
+     {
+      "section": "Harvest",
+      "label": "2nd harvest – Rice (Antsiranana/Mahajanga +2)",
+      "span": "Dec–Feb",
+      "bars": [
+       [
+        2,
+        4
+       ]
+      ]
+     },
+     {
+      "section": "Harvest",
+      "label": "Main harvest – Cereal /Legumes (Fianarantsoa/Toliary)",
+      "span": "Mar–May",
+      "bars": [
+       [
+        5,
+        7
+       ]
+      ]
+     },
+     {
+      "section": "Harvest",
+      "label": "Main harvest – Maize",
+      "span": "Mar–Apr",
+      "bars": [
+       [
+        5,
+        6
+       ]
+      ]
+     },
+     {
+      "section": "Harvest",
+      "label": "Main harvest – Rice",
+      "span": "Apr–Jun",
+      "bars": [
+       [
+        6,
+        8
+       ]
+      ]
+     },
+     {
+      "section": "Harvest",
+      "label": "Main harvest – Rice (Antsiranana/Mahajanga +2)",
+      "span": "Apr–Jun",
+      "bars": [
+       [
+        6,
+        8
+       ]
+      ]
+     },
+     {
+      "section": "Harvest",
+      "label": "Main harvest – Sorghum",
+      "span": "May",
+      "bars": [
+       [
+        7,
+        7
+       ]
+      ]
+     },
+     {
+      "section": "Lean season",
+      "label": "Lean season (Fianarantsoa/Toliary)",
+      "span": "Dec–Feb",
+      "bars": [
+       [
+        2,
+        4
+       ]
+      ]
+     },
+     {
+      "section": "Lean season",
+      "label": "Lean season (Antsiranana/Mahajanga +2)",
+      "span": "Mar–Apr",
+      "bars": [
+       [
+        5,
+        6
+       ]
+      ]
+     }
+    ],
+    "footnotes": {
+     "MDG-1": {
+      "text": "FEWS NET (2016-10-01), via ACAPS Seasonal Events Calendar.",
+      "url": "https://fews.net/southern-africa/madagascar/seasonal-calendar/october-2016"
+     },
+     "MDG-2": {
+      "text": "USDA (2023-02-01), via ACAPS Seasonal Events Calendar.",
+      "url": "https://ipad.fas.usda.gov/rssiws/al/crop_calendar/safrica.aspx"
+     }
+    }
+   },
+   "areas": {
+    "MG71": {
+     "title": "Diana (Madagascar) – seasonal calendar (Oct 2026 – Sep 2027)",
+     "prose": [
+      "This calendar combines 10 country-wide events with 5 recorded specifically for Antsiranana, which ACAPS geocodes to GADM admin-1 units that cover this action area.",
+      "The recorded seasonal hazards are the cyclone season (Nov–Feb)[^MDG-MG71-1] and the rainy season (Nov–Apr)[^MDG-MG71-1]. Planting and growing periods: Main planting – Maize (Nov–Dec)[^MDG-MG71-2], Main planting – Rice (Nov–Jan)[^MDG-MG71-2], Main planting – Sorghum (Dec)[^MDG-MG71-2], Main planting – Rice in Antananarivo, Antsiranana, Mahajanga, Toamasina (Dec–Feb)[^MDG-MG71-1], Main planting – Wheat (May)[^MDG-MG71-2] and 2nd planting – Rice in Antsiranana, Mahajanga, Toamasina, Antananarivo (Jul–Sep)[^MDG-MG71-1]. Harvests: the main harvest – Wheat (Nov)[^MDG-MG71-2], the 2nd harvest – Rice in Antsiranana, Mahajanga, Toamasina, Antananarivo (Dec–Feb)[^MDG-MG71-1], the main harvest – Maize (Mar–Apr)[^MDG-MG71-2], the main harvest – Rice (Apr–Jun)[^MDG-MG71-2], the main harvest – Rice in Antsiranana, Mahajanga, Toamasina, Antananarivo (Apr–Jun)[^MDG-MG71-1] and the main harvest – Sorghum (May)[^MDG-MG71-2]. The lean season runs from March to April[^MDG-MG71-1] in Antsiranana, Mahajanga, Toamasina, Antananarivo."
+     ],
+     "indicative": "Pressure on households is likely to peak from March to April, when the lean season coincides with the rainy season. No wet-season hazard, outbreak or lean season is recorded from May to October, making this the likeliest window for field activities such as assessments, registration or construction.",
+     "sources_note": "The 15 records come from 2 sources dated 2016 to 2023.",
+     "units": [
+      {
+       "name": "Ambanja",
+       "pcode": "MG71719",
+       "detail": ""
+      },
+      {
+       "name": "Ambilobe",
+       "pcode": "MG71717",
+       "detail": ""
+      },
+      {
+       "name": "Antsiranana I",
+       "pcode": "MG71715",
+       "detail": ""
+      },
+      {
+       "name": "Antsiranana II",
+       "pcode": "MG71713",
+       "detail": ""
+      },
+      {
+       "name": "Nosy-Be",
+       "pcode": "MG71718",
+       "detail": ""
+      }
+     ],
+     "events": [
+      {
+       "section": "Seasonal hazard",
+       "label": "Cyclone season",
+       "span": "Nov–Feb",
+       "bars": [
+        [
+         1,
+         4
+        ]
+       ]
+      },
+      {
+       "section": "Seasonal hazard",
+       "label": "Rainy season",
+       "span": "Nov–Apr",
+       "bars": [
+        [
+         1,
+         6
+        ]
+       ]
+      },
+      {
+       "section": "Planting and growing",
+       "label": "Main planting – Maize",
+       "span": "Nov–Dec",
+       "bars": [
+        [
+         1,
+         2
+        ]
+       ]
+      },
+      {
+       "section": "Planting and growing",
+       "label": "Main planting – Rice",
+       "span": "Nov–Jan",
+       "bars": [
+        [
+         1,
+         3
+        ]
+       ]
+      },
+      {
+       "section": "Planting and growing",
+       "label": "Main planting – Rice (Antananarivo/Antsiranana +2)",
+       "span": "Dec–Feb",
+       "bars": [
+        [
+         2,
+         4
+        ]
+       ]
+      },
+      {
+       "section": "Planting and growing",
+       "label": "Main planting – Sorghum",
+       "span": "Dec",
+       "bars": [
+        [
+         2,
+         2
+        ]
+       ]
+      },
+      {
+       "section": "Planting and growing",
+       "label": "Main planting – Wheat",
+       "span": "May",
+       "bars": [
+        [
+         7,
+         7
+        ]
+       ]
+      },
+      {
+       "section": "Planting and growing",
+       "label": "2nd planting – Rice (Antsiranana/Mahajanga +2)",
+       "span": "Jul–Sep",
+       "bars": [
+        [
+         9,
+         11
+        ]
+       ]
+      },
+      {
+       "section": "Harvest",
+       "label": "Main harvest – Wheat",
+       "span": "Nov",
+       "bars": [
+        [
+         1,
+         1
+        ]
+       ]
+      },
+      {
+       "section": "Harvest",
+       "label": "2nd harvest – Rice (Antsiranana/Mahajanga +2)",
+       "span": "Dec–Feb",
+       "bars": [
+        [
+         2,
+         4
+        ]
+       ]
+      },
+      {
+       "section": "Harvest",
+       "label": "Main harvest – Maize",
+       "span": "Mar–Apr",
+       "bars": [
+        [
+         5,
+         6
+        ]
+       ]
+      },
+      {
+       "section": "Harvest",
+       "label": "Main harvest – Rice",
+       "span": "Apr–Jun",
+       "bars": [
+        [
+         6,
+         8
+        ]
+       ]
+      },
+      {
+       "section": "Harvest",
+       "label": "Main harvest – Rice (Antsiranana/Mahajanga +2)",
+       "span": "Apr–Jun",
+       "bars": [
+        [
+         6,
+         8
+        ]
+       ]
+      },
+      {
+       "section": "Harvest",
+       "label": "Main harvest – Sorghum",
+       "span": "May",
+       "bars": [
+        [
+         7,
+         7
+        ]
+       ]
+      },
+      {
+       "section": "Lean season",
+       "label": "Lean season (Antsiranana/Mahajanga +2)",
+       "span": "Mar–Apr",
+       "bars": [
+        [
+         5,
+         6
+        ]
+       ]
+      }
+     ],
+     "footnotes": {
+      "MDG-MG71-1": {
+       "text": "FEWS NET (2016-10-01), via ACAPS Seasonal Events Calendar.",
+       "url": "https://fews.net/southern-africa/madagascar/seasonal-calendar/october-2016"
+      },
+      "MDG-MG71-2": {
+       "text": "USDA (2023-02-01), via ACAPS Seasonal Events Calendar.",
+       "url": "https://ipad.fas.usda.gov/rssiws/al/crop_calendar/safrica.aspx"
+      }
+     },
+     "name": "Diana"
+    },
+    "MG27": {
+     "title": "Fitovinany (Madagascar) – seasonal calendar (Oct 2026 – Sep 2027)",
+     "prose": [
+      "This calendar combines 10 country-wide events with 4 recorded specifically for Fianarantsoa, which ACAPS geocodes to GADM admin-1 units that cover this action area.",
+      "The recorded seasonal hazards are the cyclone season (Nov–Feb)[^MDG-MG27-1] and the rainy season (Nov–Apr)[^MDG-MG27-1]. Planting and growing periods: Main planting – Cereal /Legumes in Fianarantsoa, Toliary (Oct–Jan)[^MDG-MG27-1], Main planting – Maize (Nov–Dec)[^MDG-MG27-2], Main planting – Rice (Nov–Jan)[^MDG-MG27-2], Main planting – Sorghum (Dec)[^MDG-MG27-2] and Main planting – Wheat (May)[^MDG-MG27-2]. Harvests: the main harvest – Cassava in Fianarantsoa, Toliary (Aug–Oct)[^MDG-MG27-1], the main harvest – Wheat (Nov)[^MDG-MG27-2], the main harvest – Maize (Mar–Apr)[^MDG-MG27-2], the main harvest – Cereal /Legumes in Fianarantsoa, Toliary (Mar–May)[^MDG-MG27-1], the main harvest – Rice (Apr–Jun)[^MDG-MG27-2] and the main harvest – Sorghum (May)[^MDG-MG27-2]. The lean season runs from December to February[^MDG-MG27-1] in Fianarantsoa, Toliary."
+     ],
+     "indicative": "Pressure on households is likely to peak from December to February, when the lean season coincides with the cyclone season and the rainy season. Food stocks are typically replenished by harvests from August to November and from March to June. No wet-season hazard, outbreak or lean season is recorded from May to October, making this the likeliest window for field activities such as assessments, registration or construction.",
+     "sources_note": "The 14 records come from 2 sources dated 2016 to 2023.",
+     "units": [
+      {
+       "name": "Ikongo",
+       "pcode": "MG27211",
+       "detail": ""
+      },
+      {
+       "name": "Manakara Atsimo",
+       "pcode": "MG27210",
+       "detail": ""
+      },
+      {
+       "name": "Vohipeno",
+       "pcode": "MG27212",
+       "detail": ""
+      }
+     ],
+     "events": [
+      {
+       "section": "Seasonal hazard",
+       "label": "Cyclone season",
+       "span": "Nov–Feb",
+       "bars": [
+        [
+         1,
+         4
+        ]
+       ]
+      },
+      {
+       "section": "Seasonal hazard",
+       "label": "Rainy season",
+       "span": "Nov–Apr",
+       "bars": [
+        [
+         1,
+         6
+        ]
+       ]
+      },
+      {
+       "section": "Planting and growing",
+       "label": "Main planting – Cereal /Legumes (Fianarantsoa/Toliary)",
+       "span": "Oct–Jan",
+       "bars": [
+        [
+         0,
+         3
+        ]
+       ]
+      },
+      {
+       "section": "Planting and growing",
+       "label": "Main planting – Maize",
+       "span": "Nov–Dec",
+       "bars": [
+        [
+         1,
+         2
+        ]
+       ]
+      },
+      {
+       "section": "Planting and growing",
+       "label": "Main planting – Rice",
+       "span": "Nov–Jan",
+       "bars": [
+        [
+         1,
+         3
+        ]
+       ]
+      },
+      {
+       "section": "Planting and growing",
+       "label": "Main planting – Sorghum",
+       "span": "Dec",
+       "bars": [
+        [
+         2,
+         2
+        ]
+       ]
+      },
+      {
+       "section": "Planting and growing",
+       "label": "Main planting – Wheat",
+       "span": "May",
+       "bars": [
+        [
+         7,
+         7
+        ]
+       ]
+      },
+      {
+       "section": "Harvest",
+       "label": "Main harvest – Cassava (Fianarantsoa/Toliary)",
+       "span": "Aug–Oct",
+       "bars": [
+        [
+         0,
+         0
+        ],
+        [
+         10,
+         11
+        ]
+       ]
+      },
+      {
+       "section": "Harvest",
+       "label": "Main harvest – Wheat",
+       "span": "Nov",
+       "bars": [
+        [
+         1,
+         1
+        ]
+       ]
+      },
+      {
+       "section": "Harvest",
+       "label": "Main harvest – Cereal /Legumes (Fianarantsoa/Toliary)",
+       "span": "Mar–May",
+       "bars": [
+        [
+         5,
+         7
+        ]
+       ]
+      },
+      {
+       "section": "Harvest",
+       "label": "Main harvest – Maize",
+       "span": "Mar–Apr",
+       "bars": [
+        [
+         5,
+         6
+        ]
+       ]
+      },
+      {
+       "section": "Harvest",
+       "label": "Main harvest – Rice",
+       "span": "Apr–Jun",
+       "bars": [
+        [
+         6,
+         8
+        ]
+       ]
+      },
+      {
+       "section": "Harvest",
+       "label": "Main harvest – Sorghum",
+       "span": "May",
+       "bars": [
+        [
+         7,
+         7
+        ]
+       ]
+      },
+      {
+       "section": "Lean season",
+       "label": "Lean season (Fianarantsoa/Toliary)",
+       "span": "Dec–Feb",
+       "bars": [
+        [
+         2,
+         4
+        ]
+       ]
+      }
+     ],
+     "footnotes": {
+      "MDG-MG27-1": {
+       "text": "FEWS NET (2016-10-01), via ACAPS Seasonal Events Calendar.",
+       "url": "https://fews.net/southern-africa/madagascar/seasonal-calendar/october-2016"
+      },
+      "MDG-MG27-2": {
+       "text": "USDA (2023-02-01), via ACAPS Seasonal Events Calendar.",
+       "url": "https://ipad.fas.usda.gov/rssiws/al/crop_calendar/safrica.aspx"
+      }
+     },
+     "name": "Fitovinany"
+    }
+   },
+   "note": null
+  },
+  "Malawi": {
+   "national": {
+    "title": "Malawi – national seasonal calendar (Oct 2026 – Sep 2027)",
+    "prose": [
+     "ACAPS lists 20 seasonal events for Malawi, all of them country-wide.",
+     "The recorded seasonal hazard is the rainy season (Oct–Mar)[^MWI-1]. Planting and growing periods: Main planting – Maize (Sep–Nov)[^MWI-2], Main planting – Cotton (Oct–Nov)[^MWI-2], Main planting – Peanuts (Nov–Dec)[^MWI-2], Main planting – Rice (Nov–Dec)[^MWI-2], Main planting (Nov–Dec)[^MWI-1], Main planting – Sorghum (Dec)[^MWI-2], Main planting – Wheat (Feb–Mar)[^MWI-2] and 2nd planting (Apr–Jul)[^MWI-1]. Harvests: the 2nd harvest (Sep–Nov)[^MWI-1], the green harvest (Feb–Mar)[^MWI-1], the main harvest – Peanuts (Mar–May)[^MWI-2], the main harvest – Maize (Apr–Jun)[^MWI-2], the main harvest (Apr–Jul)[^MWI-1], the main harvest – Cotton (May–Jun)[^MWI-2], the main harvest – Rice (May–Jun)[^MWI-2], the main harvest – Sorghum (Jun)[^MWI-2] and the main harvest – Wheat (Jul–Aug)[^MWI-2]. The lean season runs from November to February[^MWI-1]. Disease outbreaks follow a seasonal pattern: cholera (Nov–Apr)[^MWI-3]."
+    ],
+    "indicative": "Pressure on households is likely to peak from November to February, when the lean season coincides with cholera and the rainy season. No wet-season hazard, outbreak or lean season is recorded from May to September, making this the likeliest window for field activities such as assessments, registration or construction.",
+    "sources_note": "The 20 records come from 3 sources dated 2013 to 2022. Entries more than 10 years old should be checked against current FEWS NET, FAO GIEWS or national meteorological calendars before use in planning.",
+    "units": [],
+    "events": [
+     {
+      "section": "Seasonal hazard",
+      "label": "Rainy season",
+      "span": "Oct–Mar",
+      "bars": [
+       [
+        0,
+        5
+       ]
+      ]
+     },
+     {
+      "section": "Planting and growing",
+      "label": "Main planting – Cotton",
+      "span": "Oct–Nov",
+      "bars": [
+       [
+        0,
+        1
+       ]
+      ]
+     },
+     {
+      "section": "Planting and growing",
+      "label": "Main planting – Maize",
+      "span": "Sep–Nov",
+      "bars": [
+       [
+        0,
+        1
+       ],
+       [
+        11,
+        11
+       ]
+      ]
+     },
+     {
+      "section": "Planting and growing",
+      "label": "Main planting",
+      "span": "Nov–Dec",
+      "bars": [
+       [
+        1,
+        2
+       ]
+      ]
+     },
+     {
+      "section": "Planting and growing",
+      "label": "Main planting – Peanuts",
+      "span": "Nov–Dec",
+      "bars": [
+       [
+        1,
+        2
+       ]
+      ]
+     },
+     {
+      "section": "Planting and growing",
+      "label": "Main planting – Rice",
+      "span": "Nov–Dec",
+      "bars": [
+       [
+        1,
+        2
+       ]
+      ]
+     },
+     {
+      "section": "Planting and growing",
+      "label": "Main planting – Sorghum",
+      "span": "Dec",
+      "bars": [
+       [
+        2,
+        2
+       ]
+      ]
+     },
+     {
+      "section": "Planting and growing",
+      "label": "Main planting – Wheat",
+      "span": "Feb–Mar",
+      "bars": [
+       [
+        4,
+        5
+       ]
+      ]
+     },
+     {
+      "section": "Planting and growing",
+      "label": "2nd planting",
+      "span": "Apr–Jul",
+      "bars": [
+       [
+        6,
+        9
+       ]
+      ]
+     },
+     {
+      "section": "Harvest",
+      "label": "2nd harvest",
+      "span": "Sep–Nov",
+      "bars": [
+       [
+        0,
+        1
+       ],
+       [
+        11,
+        11
+       ]
+      ]
+     },
+     {
+      "section": "Harvest",
+      "label": "Green harvest",
+      "span": "Feb–Mar",
+      "bars": [
+       [
+        4,
+        5
+       ]
+      ]
+     },
+     {
+      "section": "Harvest",
+      "label": "Main harvest – Peanuts",
+      "span": "Mar–May",
+      "bars": [
+       [
+        5,
+        7
+       ]
+      ]
+     },
+     {
+      "section": "Harvest",
+      "label": "Main harvest",
+      "span": "Apr–Jul",
+      "bars": [
+       [
+        6,
+        9
+       ]
+      ]
+     },
+     {
+      "section": "Harvest",
+      "label": "Main harvest – Maize",
+      "span": "Apr–Jun",
+      "bars": [
+       [
+        6,
+        8
+       ]
+      ]
+     },
+     {
+      "section": "Harvest",
+      "label": "Main harvest – Cotton",
+      "span": "May–Jun",
+      "bars": [
+       [
+        7,
+        8
+       ]
+      ]
+     },
+     {
+      "section": "Harvest",
+      "label": "Main harvest – Rice",
+      "span": "May–Jun",
+      "bars": [
+       [
+        7,
+        8
+       ]
+      ]
+     },
+     {
+      "section": "Harvest",
+      "label": "Main harvest – Sorghum",
+      "span": "Jun",
+      "bars": [
+       [
+        8,
+        8
+       ]
+      ]
+     },
+     {
+      "section": "Harvest",
+      "label": "Main harvest – Wheat",
+      "span": "Jul–Aug",
+      "bars": [
+       [
+        9,
+        10
+       ]
+      ]
+     },
+     {
+      "section": "Lean season",
+      "label": "Lean season",
+      "span": "Nov–Feb",
+      "bars": [
+       [
+        1,
+        4
+       ]
+      ]
+     },
+     {
+      "section": "Outbreak",
+      "label": "Cholera",
+      "span": "Nov–Apr",
+      "bars": [
+       [
+        1,
+        6
+       ]
+      ]
+     }
+    ],
+    "footnotes": {
+     "MWI-1": {
+      "text": "FEWS NET (2013-12-31), via ACAPS Seasonal Events Calendar.",
+      "url": "https://fews.net/southern-africa/malawi/seasonal-calendar/december-2013"
+     },
+     "MWI-2": {
+      "text": "USDA (2022-06-22), via ACAPS Seasonal Events Calendar.",
+      "url": "https://ipad.fas.usda.gov/rssiws/al/crop_calendar/safrica.aspx"
+     },
+     "MWI-3": {
+      "text": "Government of Malawi (2020-01-08), via ACAPS Seasonal Events Calendar.",
+      "url": "https://reliefweb.int/report/malawi/malawi-cholera-season-update"
+     }
+    }
+   },
+   "areas": {
+    "MW2": {
+     "title": "Central (Malawi) – seasonal calendar (Oct 2026 – Sep 2027)",
+     "prose": [
+      "None of ACAPS's sub-national records fall within Central, so this calendar shows only the 20 country-wide events and matches the national pattern.",
+      "The recorded seasonal hazard is the rainy season (Oct–Mar)[^MWI-MW2-1]. Planting and growing periods: Main planting – Maize (Sep–Nov)[^MWI-MW2-2], Main planting – Cotton (Oct–Nov)[^MWI-MW2-2], Main planting – Peanuts (Nov–Dec)[^MWI-MW2-2], Main planting – Rice (Nov–Dec)[^MWI-MW2-2], Main planting (Nov–Dec)[^MWI-MW2-1], Main planting – Sorghum (Dec)[^MWI-MW2-2], Main planting – Wheat (Feb–Mar)[^MWI-MW2-2] and 2nd planting (Apr–Jul)[^MWI-MW2-1]. Harvests: the 2nd harvest (Sep–Nov)[^MWI-MW2-1], the green harvest (Feb–Mar)[^MWI-MW2-1], the main harvest – Peanuts (Mar–May)[^MWI-MW2-2], the main harvest – Maize (Apr–Jun)[^MWI-MW2-2], the main harvest (Apr–Jul)[^MWI-MW2-1], the main harvest – Cotton (May–Jun)[^MWI-MW2-2], the main harvest – Rice (May–Jun)[^MWI-MW2-2], the main harvest – Sorghum (Jun)[^MWI-MW2-2] and the main harvest – Wheat (Jul–Aug)[^MWI-MW2-2]. The lean season runs from November to February[^MWI-MW2-1]. Disease outbreaks follow a seasonal pattern: cholera (Nov–Apr)[^MWI-MW2-3]."
+     ],
+     "indicative": "Pressure on households is likely to peak from November to February, when the lean season coincides with cholera and the rainy season. No wet-season hazard, outbreak or lean season is recorded from May to September, making this the likeliest window for field activities such as assessments, registration or construction.",
+     "sources_note": "The 20 records come from 3 sources dated 2013 to 2022. Entries more than 10 years old should be checked against current FEWS NET, FAO GIEWS or national meteorological calendars before use in planning.",
+     "units": [
+      {
+       "name": "Dowa",
+       "pcode": "MW204",
+       "detail": "TA Mkukula; TA Msakambewa"
+      }
+     ],
+     "events": [
+      {
+       "section": "Seasonal hazard",
+       "label": "Rainy season",
+       "span": "Oct–Mar",
+       "bars": [
+        [
+         0,
+         5
+        ]
+       ]
+      },
+      {
+       "section": "Planting and growing",
+       "label": "Main planting – Cotton",
+       "span": "Oct–Nov",
+       "bars": [
+        [
+         0,
+         1
+        ]
+       ]
+      },
+      {
+       "section": "Planting and growing",
+       "label": "Main planting – Maize",
+       "span": "Sep–Nov",
+       "bars": [
+        [
+         0,
+         1
+        ],
+        [
+         11,
+         11
+        ]
+       ]
+      },
+      {
+       "section": "Planting and growing",
+       "label": "Main planting",
+       "span": "Nov–Dec",
+       "bars": [
+        [
+         1,
+         2
+        ]
+       ]
+      },
+      {
+       "section": "Planting and growing",
+       "label": "Main planting – Peanuts",
+       "span": "Nov–Dec",
+       "bars": [
+        [
+         1,
+         2
+        ]
+       ]
+      },
+      {
+       "section": "Planting and growing",
+       "label": "Main planting – Rice",
+       "span": "Nov–Dec",
+       "bars": [
+        [
+         1,
+         2
+        ]
+       ]
+      },
+      {
+       "section": "Planting and growing",
+       "label": "Main planting – Sorghum",
+       "span": "Dec",
+       "bars": [
+        [
+         2,
+         2
+        ]
+       ]
+      },
+      {
+       "section": "Planting and growing",
+       "label": "Main planting – Wheat",
+       "span": "Feb–Mar",
+       "bars": [
+        [
+         4,
+         5
+        ]
+       ]
+      },
+      {
+       "section": "Planting and growing",
+       "label": "2nd planting",
+       "span": "Apr–Jul",
+       "bars": [
+        [
+         6,
+         9
+        ]
+       ]
+      },
+      {
+       "section": "Harvest",
+       "label": "2nd harvest",
+       "span": "Sep–Nov",
+       "bars": [
+        [
+         0,
+         1
+        ],
+        [
+         11,
+         11
+        ]
+       ]
+      },
+      {
+       "section": "Harvest",
+       "label": "Green harvest",
+       "span": "Feb–Mar",
+       "bars": [
+        [
+         4,
+         5
+        ]
+       ]
+      },
+      {
+       "section": "Harvest",
+       "label": "Main harvest – Peanuts",
+       "span": "Mar–May",
+       "bars": [
+        [
+         5,
+         7
+        ]
+       ]
+      },
+      {
+       "section": "Harvest",
+       "label": "Main harvest",
+       "span": "Apr–Jul",
+       "bars": [
+        [
+         6,
+         9
+        ]
+       ]
+      },
+      {
+       "section": "Harvest",
+       "label": "Main harvest – Maize",
+       "span": "Apr–Jun",
+       "bars": [
+        [
+         6,
+         8
+        ]
+       ]
+      },
+      {
+       "section": "Harvest",
+       "label": "Main harvest – Cotton",
+       "span": "May–Jun",
+       "bars": [
+        [
+         7,
+         8
+        ]
+       ]
+      },
+      {
+       "section": "Harvest",
+       "label": "Main harvest – Rice",
+       "span": "May–Jun",
+       "bars": [
+        [
+         7,
+         8
+        ]
+       ]
+      },
+      {
+       "section": "Harvest",
+       "label": "Main harvest – Sorghum",
+       "span": "Jun",
+       "bars": [
+        [
+         8,
+         8
+        ]
+       ]
+      },
+      {
+       "section": "Harvest",
+       "label": "Main harvest – Wheat",
+       "span": "Jul–Aug",
+       "bars": [
+        [
+         9,
+         10
+        ]
+       ]
+      },
+      {
+       "section": "Lean season",
+       "label": "Lean season",
+       "span": "Nov–Feb",
+       "bars": [
+        [
+         1,
+         4
+        ]
+       ]
+      },
+      {
+       "section": "Outbreak",
+       "label": "Cholera",
+       "span": "Nov–Apr",
+       "bars": [
+        [
+         1,
+         6
+        ]
+       ]
+      }
+     ],
+     "footnotes": {
+      "MWI-MW2-1": {
+       "text": "FEWS NET (2013-12-31), via ACAPS Seasonal Events Calendar.",
+       "url": "https://fews.net/southern-africa/malawi/seasonal-calendar/december-2013"
+      },
+      "MWI-MW2-2": {
+       "text": "USDA (2022-06-22), via ACAPS Seasonal Events Calendar.",
+       "url": "https://ipad.fas.usda.gov/rssiws/al/crop_calendar/safrica.aspx"
+      },
+      "MWI-MW2-3": {
+       "text": "Government of Malawi (2020-01-08), via ACAPS Seasonal Events Calendar.",
+       "url": "https://reliefweb.int/report/malawi/malawi-cholera-season-update"
+      }
+     },
+     "name": "Central"
+    },
+    "MW3": {
+     "title": "Southern (Malawi) – seasonal calendar (Oct 2026 – Sep 2027)",
+     "prose": [
+      "None of ACAPS's sub-national records fall within Southern, so this calendar shows only the 20 country-wide events and matches the national pattern.",
+      "The recorded seasonal hazard is the rainy season (Oct–Mar)[^MWI-MW3-1]. Planting and growing periods: Main planting – Maize (Sep–Nov)[^MWI-MW3-2], Main planting – Cotton (Oct–Nov)[^MWI-MW3-2], Main planting – Peanuts (Nov–Dec)[^MWI-MW3-2], Main planting – Rice (Nov–Dec)[^MWI-MW3-2], Main planting (Nov–Dec)[^MWI-MW3-1], Main planting – Sorghum (Dec)[^MWI-MW3-2], Main planting – Wheat (Feb–Mar)[^MWI-MW3-2] and 2nd planting (Apr–Jul)[^MWI-MW3-1]. Harvests: the 2nd harvest (Sep–Nov)[^MWI-MW3-1], the green harvest (Feb–Mar)[^MWI-MW3-1], the main harvest – Peanuts (Mar–May)[^MWI-MW3-2], the main harvest – Maize (Apr–Jun)[^MWI-MW3-2], the main harvest (Apr–Jul)[^MWI-MW3-1], the main harvest – Cotton (May–Jun)[^MWI-MW3-2], the main harvest – Rice (May–Jun)[^MWI-MW3-2], the main harvest – Sorghum (Jun)[^MWI-MW3-2] and the main harvest – Wheat (Jul–Aug)[^MWI-MW3-2]. The lean season runs from November to February[^MWI-MW3-1]. Disease outbreaks follow a seasonal pattern: cholera (Nov–Apr)[^MWI-MW3-3]."
+     ],
+     "indicative": "Pressure on households is likely to peak from November to February, when the lean season coincides with cholera and the rainy season. No wet-season hazard, outbreak or lean season is recorded from May to September, making this the likeliest window for field activities such as assessments, registration or construction.",
+     "sources_note": "The 20 records come from 3 sources dated 2013 to 2022. Entries more than 10 years old should be checked against current FEWS NET, FAO GIEWS or national meteorological calendars before use in planning.",
+     "units": [
+      {
+       "name": "Blantyre",
+       "pcode": "MW305",
+       "detail": "TA Chigaru; TA Lundu"
+      },
+      {
+       "name": "Blantyre City",
+       "pcode": "MW315",
+       "detail": "Bangwe Ward; Soche East Ward; Soche West Ward"
+      },
+      {
+       "name": "Chikwawa",
+       "pcode": "MW310",
+       "detail": "TA Lundu; TA Makhwira; TA Maseya; TA Ngabu; TA Ngowe"
+      },
+      {
+       "name": "Mangochi",
+       "pcode": "MW301",
+       "detail": "TA Chimwala; TA Chowe; TA Makanjila; TA Nankumba"
+      },
+      {
+       "name": "Mulanje",
+       "pcode": "MW308",
+       "detail": "TA Laston Njema; TA Mabuka; TA Nkanda"
+      },
+      {
+       "name": "Nsanje",
+       "pcode": "MW311",
+       "detail": "TA Mbenje; TA Mlolo"
+      },
+      {
+       "name": "Phalombe",
+       "pcode": "MW309",
+       "detail": "TA Jenala"
+      }
+     ],
+     "events": [
+      {
+       "section": "Seasonal hazard",
+       "label": "Rainy season",
+       "span": "Oct–Mar",
+       "bars": [
+        [
+         0,
+         5
+        ]
+       ]
+      },
+      {
+       "section": "Planting and growing",
+       "label": "Main planting – Cotton",
+       "span": "Oct–Nov",
+       "bars": [
+        [
+         0,
+         1
+        ]
+       ]
+      },
+      {
+       "section": "Planting and growing",
+       "label": "Main planting – Maize",
+       "span": "Sep–Nov",
+       "bars": [
+        [
+         0,
+         1
+        ],
+        [
+         11,
+         11
+        ]
+       ]
+      },
+      {
+       "section": "Planting and growing",
+       "label": "Main planting",
+       "span": "Nov–Dec",
+       "bars": [
+        [
+         1,
+         2
+        ]
+       ]
+      },
+      {
+       "section": "Planting and growing",
+       "label": "Main planting – Peanuts",
+       "span": "Nov–Dec",
+       "bars": [
+        [
+         1,
+         2
+        ]
+       ]
+      },
+      {
+       "section": "Planting and growing",
+       "label": "Main planting – Rice",
+       "span": "Nov–Dec",
+       "bars": [
+        [
+         1,
+         2
+        ]
+       ]
+      },
+      {
+       "section": "Planting and growing",
+       "label": "Main planting – Sorghum",
+       "span": "Dec",
+       "bars": [
+        [
+         2,
+         2
+        ]
+       ]
+      },
+      {
+       "section": "Planting and growing",
+       "label": "Main planting – Wheat",
+       "span": "Feb–Mar",
+       "bars": [
+        [
+         4,
+         5
+        ]
+       ]
+      },
+      {
+       "section": "Planting and growing",
+       "label": "2nd planting",
+       "span": "Apr–Jul",
+       "bars": [
+        [
+         6,
+         9
+        ]
+       ]
+      },
+      {
+       "section": "Harvest",
+       "label": "2nd harvest",
+       "span": "Sep–Nov",
+       "bars": [
+        [
+         0,
+         1
+        ],
+        [
+         11,
+         11
+        ]
+       ]
+      },
+      {
+       "section": "Harvest",
+       "label": "Green harvest",
+       "span": "Feb–Mar",
+       "bars": [
+        [
+         4,
+         5
+        ]
+       ]
+      },
+      {
+       "section": "Harvest",
+       "label": "Main harvest – Peanuts",
+       "span": "Mar–May",
+       "bars": [
+        [
+         5,
+         7
+        ]
+       ]
+      },
+      {
+       "section": "Harvest",
+       "label": "Main harvest",
+       "span": "Apr–Jul",
+       "bars": [
+        [
+         6,
+         9
+        ]
+       ]
+      },
+      {
+       "section": "Harvest",
+       "label": "Main harvest – Maize",
+       "span": "Apr–Jun",
+       "bars": [
+        [
+         6,
+         8
+        ]
+       ]
+      },
+      {
+       "section": "Harvest",
+       "label": "Main harvest – Cotton",
+       "span": "May–Jun",
+       "bars": [
+        [
+         7,
+         8
+        ]
+       ]
+      },
+      {
+       "section": "Harvest",
+       "label": "Main harvest – Rice",
+       "span": "May–Jun",
+       "bars": [
+        [
+         7,
+         8
+        ]
+       ]
+      },
+      {
+       "section": "Harvest",
+       "label": "Main harvest – Sorghum",
+       "span": "Jun",
+       "bars": [
+        [
+         8,
+         8
+        ]
+       ]
+      },
+      {
+       "section": "Harvest",
+       "label": "Main harvest – Wheat",
+       "span": "Jul–Aug",
+       "bars": [
+        [
+         9,
+         10
+        ]
+       ]
+      },
+      {
+       "section": "Lean season",
+       "label": "Lean season",
+       "span": "Nov–Feb",
+       "bars": [
+        [
+         1,
+         4
+        ]
+       ]
+      },
+      {
+       "section": "Outbreak",
+       "label": "Cholera",
+       "span": "Nov–Apr",
+       "bars": [
+        [
+         1,
+         6
+        ]
+       ]
+      }
+     ],
+     "footnotes": {
+      "MWI-MW3-1": {
+       "text": "FEWS NET (2013-12-31), via ACAPS Seasonal Events Calendar.",
+       "url": "https://fews.net/southern-africa/malawi/seasonal-calendar/december-2013"
+      },
+      "MWI-MW3-2": {
+       "text": "USDA (2022-06-22), via ACAPS Seasonal Events Calendar.",
+       "url": "https://ipad.fas.usda.gov/rssiws/al/crop_calendar/safrica.aspx"
+      },
+      "MWI-MW3-3": {
+       "text": "Government of Malawi (2020-01-08), via ACAPS Seasonal Events Calendar.",
+       "url": "https://reliefweb.int/report/malawi/malawi-cholera-season-update"
+      }
+     },
+     "name": "Southern"
+    }
+   },
+   "note": null
+  },
+  "Mozambique": {
+   "national": {
+    "title": "Mozambique – national seasonal calendar (Oct 2026 – Sep 2027)",
+    "prose": [
+     "ACAPS lists 14 seasonal events for Mozambique, 14 of them limited to specific admin-1 areas (shown in brackets).",
+     "The recorded seasonal hazards are the rainy season in Gaza, Inhambane, Manica, Maputo, Maputo City, Sofala, Tete (Oct–Mar)[^MOZ-1], the cyclone season in Gaza, Inhambane, Manica, Maputo, Maputo City, Sofala, Tete (Oct–Mar)[^MOZ-1], the rainy season in Cabo Delgado, Nampula, Nassa, Zambezia (Nov–Apr)[^MOZ-1] and the cyclone season in Cabo Delgado, Nampula, Nassa, Zambezia (Nov–Apr)[^MOZ-1]. Planting and growing periods: Main planting in Gaza, Inhambane, Manica, Maputo, Maputo City, Sofala, Tete (Oct–Dec)[^MOZ-1], Land preparation in Cabo Delgado, Nampula, Nassa, Zambezia (Sep–Oct)[^MOZ-1], Main planting in Cabo Delgado, Nassa, Zambezia, Nampula (Nov–Jan)[^MOZ-1], 2nd planting in Gaza, Inhambane, Manica, Maputo, Maputo City, Sofala, Tete (May–Jul)[^MOZ-1] and Land preparation in Gaza, Inhambane, Manica, Maputo, Maputo City, Sofala, Tete (Aug–Sep)[^MOZ-1]. Harvests: the main harvest in Gaza, Inhambane, Manica, Maputo, Maputo City, Sofala, Tete (Mar–May)[^MOZ-1], the main harvest in Cabo Delgado, Nampula, Nassa, Zambezia (Apr–Jun)[^MOZ-1] and the 2nd harvest in Gaza, Inhambane, Manica, Maputo, Maputo City, Sofala, Tete (Jul–Aug)[^MOZ-1]. The lean season runs from October to January[^MOZ-1] in Gaza, Inhambane, Manica, Maputo, Maputo City, Sofala, Tete and from December to March[^MOZ-1] in Cabo Delgado, Nampula, Nassa, Zambezia."
+    ],
+    "indicative": "Pressure on households is likely to peak from October to March, when the lean season coincides with the cyclone season and the rainy season. No wet-season hazard, outbreak or lean season is recorded from May to September, making this the likeliest window for field activities such as assessments, registration or construction.",
+    "sources_note": "The 14 records come from 1 source dated 2013. Entries more than 10 years old should be checked against current FEWS NET, FAO GIEWS or national meteorological calendars before use in planning.",
+    "units": [],
+    "events": [
+     {
+      "section": "Seasonal hazard",
+      "label": "Cyclone season (Gaza/Inhambane +5)",
+      "span": "Oct–Mar",
+      "bars": [
+       [
+        0,
+        5
+       ]
+      ]
+     },
+     {
+      "section": "Seasonal hazard",
+      "label": "Rainy season (Gaza/Inhambane +5)",
+      "span": "Oct–Mar",
+      "bars": [
+       [
+        0,
+        5
+       ]
+      ]
+     },
+     {
+      "section": "Seasonal hazard",
+      "label": "Cyclone season (Cabo Delgado/Nampula +2)",
+      "span": "Nov–Apr",
+      "bars": [
+       [
+        1,
+        6
+       ]
+      ]
+     },
+     {
+      "section": "Seasonal hazard",
+      "label": "Rainy season (Cabo Delgado/Nampula +2)",
+      "span": "Nov–Apr",
+      "bars": [
+       [
+        1,
+        6
+       ]
+      ]
+     },
+     {
+      "section": "Planting and growing",
+      "label": "Land preparation (Cabo Delgado/Nampula +2)",
+      "span": "Sep–Oct",
+      "bars": [
+       [
+        0,
+        0
+       ],
+       [
+        11,
+        11
+       ]
+      ]
+     },
+     {
+      "section": "Planting and growing",
+      "label": "Main planting (Gaza/Inhambane +5)",
+      "span": "Oct–Dec",
+      "bars": [
+       [
+        0,
+        2
+       ]
+      ]
+     },
+     {
+      "section": "Planting and growing",
+      "label": "Main planting (Cabo Delgado/Nassa +2)",
+      "span": "Nov–Jan",
+      "bars": [
+       [
+        1,
+        3
+       ]
+      ]
+     },
+     {
+      "section": "Planting and growing",
+      "label": "2nd planting (Gaza/Inhambane +5)",
+      "span": "May–Jul",
+      "bars": [
+       [
+        7,
+        9
+       ]
+      ]
+     },
+     {
+      "section": "Planting and growing",
+      "label": "Land preparation (Gaza/Inhambane +5)",
+      "span": "Aug–Sep",
+      "bars": [
+       [
+        10,
+        11
+       ]
+      ]
+     },
+     {
+      "section": "Harvest",
+      "label": "Main harvest (Gaza/Inhambane +5)",
+      "span": "Mar–May",
+      "bars": [
+       [
+        5,
+        7
+       ]
+      ]
+     },
+     {
+      "section": "Harvest",
+      "label": "Main harvest (Cabo Delgado/Nampula +2)",
+      "span": "Apr–Jun",
+      "bars": [
+       [
+        6,
+        8
+       ]
+      ]
+     },
+     {
+      "section": "Harvest",
+      "label": "2nd harvest (Gaza/Inhambane +5)",
+      "span": "Jul–Aug",
+      "bars": [
+       [
+        9,
+        10
+       ]
+      ]
+     },
+     {
+      "section": "Lean season",
+      "label": "Lean season (Gaza/Inhambane +5)",
+      "span": "Oct–Jan",
+      "bars": [
+       [
+        0,
+        3
+       ]
+      ]
+     },
+     {
+      "section": "Lean season",
+      "label": "Lean season (Cabo Delgado/Nampula +2)",
+      "span": "Dec–Mar",
+      "bars": [
+       [
+        2,
+        5
+       ]
+      ]
+     }
+    ],
+    "footnotes": {
+     "MOZ-1": {
+      "text": "FEWS NET (2013-12-14), via ACAPS Seasonal Events Calendar.",
+      "url": "https://fews.net/southern-africa/mozambique/seasonal-calendar/december-2013"
+     }
+    }
+   },
+   "areas": {
+    "MZ07": {
+     "title": "Sofala (Mozambique) – seasonal calendar (Oct 2026 – Sep 2027)",
+     "prose": [
+      "This calendar combines 0 country-wide events with 8 recorded specifically for Sofala, which ACAPS geocodes to GADM admin-1 units that cover this action area.",
+      "The recorded seasonal hazards are the rainy season in Gaza, Inhambane, Manica, Maputo, Maputo City, Sofala, Tete (Oct–Mar)[^MOZ-MZ07-1] and the cyclone season in Gaza, Inhambane, Manica, Maputo, Maputo City, Sofala, Tete (Oct–Mar)[^MOZ-MZ07-1]. Planting and growing periods: Main planting in Gaza, Inhambane, Manica, Maputo, Maputo City, Sofala, Tete (Oct–Dec)[^MOZ-MZ07-1], 2nd planting in Gaza, Inhambane, Manica, Maputo, Maputo City, Sofala, Tete (May–Jul)[^MOZ-MZ07-1] and Land preparation in Gaza, Inhambane, Manica, Maputo, Maputo City, Sofala, Tete (Aug–Sep)[^MOZ-MZ07-1]. Harvests: the main harvest in Gaza, Inhambane, Manica, Maputo, Maputo City, Sofala, Tete (Mar–May)[^MOZ-MZ07-1] and the 2nd harvest in Gaza, Inhambane, Manica, Maputo, Maputo City, Sofala, Tete (Jul–Aug)[^MOZ-MZ07-1]. The lean season runs from October to January[^MOZ-MZ07-1] in Gaza, Inhambane, Manica, Maputo, Maputo City, Sofala, Tete."
+     ],
+     "indicative": "Pressure on households is likely to peak from October to January, when the lean season coincides with the cyclone season and the rainy season. Food stocks are typically replenished by harvests from March to May and from July to August. No wet-season hazard, outbreak or lean season is recorded from April to September, making this the likeliest window for field activities such as assessments, registration or construction.",
+     "sources_note": "The 8 records come from 1 source dated 2013. Entries more than 10 years old should be checked against current FEWS NET, FAO GIEWS or national meteorological calendars before use in planning.",
+     "units": [
+      {
+       "name": "Caia",
+       "pcode": "MZ0703",
+       "detail": ""
+      },
+      {
+       "name": "Marromeu",
+       "pcode": "MZ0711",
+       "detail": ""
+      },
+      {
+       "name": "Nhamatanda",
+       "pcode": "MZ0713",
+       "detail": ""
+      }
+     ],
+     "events": [
+      {
+       "section": "Seasonal hazard",
+       "label": "Cyclone season (Gaza/Inhambane +5)",
+       "span": "Oct–Mar",
+       "bars": [
+        [
+         0,
+         5
+        ]
+       ]
+      },
+      {
+       "section": "Seasonal hazard",
+       "label": "Rainy season (Gaza/Inhambane +5)",
+       "span": "Oct–Mar",
+       "bars": [
+        [
+         0,
+         5
+        ]
+       ]
+      },
+      {
+       "section": "Planting and growing",
+       "label": "Main planting (Gaza/Inhambane +5)",
+       "span": "Oct–Dec",
+       "bars": [
+        [
+         0,
+         2
+        ]
+       ]
+      },
+      {
+       "section": "Planting and growing",
+       "label": "2nd planting (Gaza/Inhambane +5)",
+       "span": "May–Jul",
+       "bars": [
+        [
+         7,
+         9
+        ]
+       ]
+      },
+      {
+       "section": "Planting and growing",
+       "label": "Land preparation (Gaza/Inhambane +5)",
+       "span": "Aug–Sep",
+       "bars": [
+        [
+         10,
+         11
+        ]
+       ]
+      },
+      {
+       "section": "Harvest",
+       "label": "Main harvest (Gaza/Inhambane +5)",
+       "span": "Mar–May",
+       "bars": [
+        [
+         5,
+         7
+        ]
+       ]
+      },
+      {
+       "section": "Harvest",
+       "label": "2nd harvest (Gaza/Inhambane +5)",
+       "span": "Jul–Aug",
+       "bars": [
+        [
+         9,
+         10
+        ]
+       ]
+      },
+      {
+       "section": "Lean season",
+       "label": "Lean season (Gaza/Inhambane +5)",
+       "span": "Oct–Jan",
+       "bars": [
+        [
+         0,
+         3
+        ]
+       ]
+      }
+     ],
+     "footnotes": {
+      "MOZ-MZ07-1": {
+       "text": "FEWS NET (2013-12-14), via ACAPS Seasonal Events Calendar.",
+       "url": "https://fews.net/southern-africa/mozambique/seasonal-calendar/december-2013"
+      }
+     },
+     "name": "Sofala"
+    },
+    "MZ05": {
+     "title": "Tete (Mozambique) – seasonal calendar (Oct 2026 – Sep 2027)",
+     "prose": [
+      "This calendar combines 0 country-wide events with 8 recorded specifically for Tete, which ACAPS geocodes to GADM admin-1 units that cover this action area.",
+      "The recorded seasonal hazards are the rainy season in Gaza, Inhambane, Manica, Maputo, Maputo City, Sofala, Tete (Oct–Mar)[^MOZ-MZ05-1] and the cyclone season in Gaza, Inhambane, Manica, Maputo, Maputo City, Sofala, Tete (Oct–Mar)[^MOZ-MZ05-1]. Planting and growing periods: Main planting in Gaza, Inhambane, Manica, Maputo, Maputo City, Sofala, Tete (Oct–Dec)[^MOZ-MZ05-1], 2nd planting in Gaza, Inhambane, Manica, Maputo, Maputo City, Sofala, Tete (May–Jul)[^MOZ-MZ05-1] and Land preparation in Gaza, Inhambane, Manica, Maputo, Maputo City, Sofala, Tete (Aug–Sep)[^MOZ-MZ05-1]. Harvests: the main harvest in Gaza, Inhambane, Manica, Maputo, Maputo City, Sofala, Tete (Mar–May)[^MOZ-MZ05-1] and the 2nd harvest in Gaza, Inhambane, Manica, Maputo, Maputo City, Sofala, Tete (Jul–Aug)[^MOZ-MZ05-1]. The lean season runs from October to January[^MOZ-MZ05-1] in Gaza, Inhambane, Manica, Maputo, Maputo City, Sofala, Tete."
+     ],
+     "indicative": "Pressure on households is likely to peak from October to January, when the lean season coincides with the cyclone season and the rainy season. Food stocks are typically replenished by harvests from March to May and from July to August. No wet-season hazard, outbreak or lean season is recorded from April to September, making this the likeliest window for field activities such as assessments, registration or construction.",
+     "sources_note": "The 8 records come from 1 source dated 2013. Entries more than 10 years old should be checked against current FEWS NET, FAO GIEWS or national meteorological calendars before use in planning.",
+     "units": [
+      {
+       "name": "Doa",
+       "pcode": "MZ0514",
+       "detail": ""
+      },
+      {
+       "name": "Mutarara",
+       "pcode": "MZ0511",
+       "detail": ""
+      }
+     ],
+     "events": [
+      {
+       "section": "Seasonal hazard",
+       "label": "Cyclone season (Gaza/Inhambane +5)",
+       "span": "Oct–Mar",
+       "bars": [
+        [
+         0,
+         5
+        ]
+       ]
+      },
+      {
+       "section": "Seasonal hazard",
+       "label": "Rainy season (Gaza/Inhambane +5)",
+       "span": "Oct–Mar",
+       "bars": [
+        [
+         0,
+         5
+        ]
+       ]
+      },
+      {
+       "section": "Planting and growing",
+       "label": "Main planting (Gaza/Inhambane +5)",
+       "span": "Oct–Dec",
+       "bars": [
+        [
+         0,
+         2
+        ]
+       ]
+      },
+      {
+       "section": "Planting and growing",
+       "label": "2nd planting (Gaza/Inhambane +5)",
+       "span": "May–Jul",
+       "bars": [
+        [
+         7,
+         9
+        ]
+       ]
+      },
+      {
+       "section": "Planting and growing",
+       "label": "Land preparation (Gaza/Inhambane +5)",
+       "span": "Aug–Sep",
+       "bars": [
+        [
+         10,
+         11
+        ]
+       ]
+      },
+      {
+       "section": "Harvest",
+       "label": "Main harvest (Gaza/Inhambane +5)",
+       "span": "Mar–May",
+       "bars": [
+        [
+         5,
+         7
+        ]
+       ]
+      },
+      {
+       "section": "Harvest",
+       "label": "2nd harvest (Gaza/Inhambane +5)",
+       "span": "Jul–Aug",
+       "bars": [
+        [
+         9,
+         10
+        ]
+       ]
+      },
+      {
+       "section": "Lean season",
+       "label": "Lean season (Gaza/Inhambane +5)",
+       "span": "Oct–Jan",
+       "bars": [
+        [
+         0,
+         3
+        ]
+       ]
+      }
+     ],
+     "footnotes": {
+      "MOZ-MZ05-1": {
+       "text": "FEWS NET (2013-12-14), via ACAPS Seasonal Events Calendar.",
+       "url": "https://fews.net/southern-africa/mozambique/seasonal-calendar/december-2013"
+      }
+     },
+     "name": "Tete"
+    }
+   },
+   "note": null
+  },
+  "Comoros": {
+   "national": null,
+   "areas": {},
+   "note": "ACAPS holds no seasonal events for this country in the data supplied, so no calendar can be drawn. FEWS NET, FAO GIEWS country briefs and the national meteorological service are the usual alternatives."
+  },
+  "Mauritius": {
+   "national": null,
+   "areas": {},
+   "note": "ACAPS holds no seasonal events for this country in the data supplied, so no calendar can be drawn. FEWS NET, FAO GIEWS country briefs and the national meteorological service are the usual alternatives."
+  },
+  "Seychelles": {
+   "national": null,
+   "areas": {},
+   "note": "ACAPS holds no seasonal events for this country in the data supplied, so no calendar can be drawn. FEWS NET, FAO GIEWS country briefs and the national meteorological service are the usual alternatives."
+  }
+ }
+}
